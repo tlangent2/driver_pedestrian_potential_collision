@@ -14,9 +14,12 @@ import osmnx as ox
 from descartes.patch import PolygonPatch
 import shapely.geometry as ge
 import geopy.distance
+import networkx as nx
+from shapely.geometry import LineString, Point
 
 
 def node_to_point(n):
+    global G
     dic = G.node[n]
     return (dic['x'], dic['y'])
 
@@ -36,6 +39,7 @@ def find_next_tree(nns, former_node, tree_edges, dist):
         tree_edges += nearest_edges
         #        paint_edges(tree_edges)
         nnids = list(set([n for n in sum([[e[1], e[2]] for e in nearest_edges], []) if n != nn[0]]))
+        nnids = [n for n in nnids if is_reachable(n,nn[0])]
         leaves += [[n, nx.shortest_path_length(G, n, nn[0], weight='length') + nn[1]] for n in nnids if
                    nx.shortest_path_length(G, n, nn[0], weight='length') + nn[1] > dist]
         nns_ = [[n, nx.shortest_path_length(G, n, nn[0], weight='length') + nn[1]] for n in nnids if
@@ -55,7 +59,14 @@ def same_edge(e1,e2):
     return False
 
 
-def find_direction(start):
+def is_reachable(n1,n2):
+    try:
+        nx.shortest_path_length(G, n1 ,n2  , weight='length')
+        return True
+    except:
+        return False
+
+def find_direction(start, walk_pois_df, G):
     prev = start - 1
     start_row = walk_pois_df.iloc[start]
     start_point = (start_row['gps_longitude'], start_row['gps_latitude'])
@@ -95,8 +106,15 @@ def find_direction(start):
             return (None, None, None, None)
     return former_node, next_node, start_point, prev_point
 
+leaves=None
+graph_edges=None
+G=None
 
 def main():
+    global leaves
+    global graph_edges
+    global G
+
     try:
         (opts, args) = getopt.getopt(sys.argv[1:], 'hs:u:d:', ['help', 'server_type=', 'userid=', 'date='])
     # raised whenever an option (which requires a value) is passed without a value.
@@ -131,16 +149,17 @@ def main():
         start_date = (datetime.datetime.fromisoformat(date) - datetime.timedelta(days=1)).strftime(
             "%Y-%m-%d") + " 00:00:00+0000"
         end_date = date + " 00:00:00+0000"
-
+        print(user_id, start_date, end_date)
         ids_sessions = timerange_for_user.get_id_list_from_user(user_id, start_date, end_date)
-
+        if len(ids_sessions) == 0:
+            print('no data for this input')
+            return
         print(ids_sessions)
 
         print('retreiving data from server')
 
-        #   ids = ids_sessions[3]
-        ids = ['5d60d4b1d997ab0b6038c85a', '5d60d13fd997ab0b6038c7c8',
-               '5d60d11cd997ab0b6038c6f0']
+        ids = ids_sessions[0]
+#        ids = ['5d60d4b1d997ab0b6038c85a', '5d60d13fd997ab0b6038c7c8', '5d60d11cd997ab0b6038c6f0']
         print('get_df_for_ids')
 
         df_AS = read_from_mongo.get_df_for_ids(ids)
@@ -202,19 +221,20 @@ def main():
             while nn is None:
                 start += 1
                 prev += 1
-                former_node, next_node, start_point, prev_point = find_direction(start)
+                former_node, next_node, start_point, prev_point = find_direction(start, walk_pois_df,G)
                 nn = next_node
             print(start)
             print('start_point ', start_point)
             start_edge_len = geopy.distance.distance(start_point, node_to_point(nn)).m
+            edge_points_full = []
+            edge_points_partial = []
             if start_edge_len > dist:
                 only_edge = LineString([start_point, node_to_point(nn)])
                 only_edge = LineString([start_point, only_edge.interpolate(
                     only_edge.length * dist / geopy.distance.distance(start_point, node_to_point(nn)).m)])
                 print('start_edge_len', start_edge_len)
                 edge_points_start = get_edge_points(only_edge)
-                edge_points_full = []
-                edge_points_partial = []
+
             else:
                 nns = [[nn, start_edge_len]]
                 tree_edges = []
@@ -234,7 +254,7 @@ def main():
                 leaves_edges = [[LineString([Point(G.node[path[-2]]['x'], G.node[path[-2]]['y']),
                                              Point(G.node[path[-1]]['x'], G.node[path[-1]]['y'])]), path[-2], path[-1]]
                                 for path in
-                                [nx.shortest_path(G, nn, l[0], weight='length') for l in leaves
+                                [nx.shortest_path(G, nn, l[0], weight='length') for l in [l for l in leaves if is_reachable(nn, l[0])]
                                  if all(
                                     elem in tree_edges_nodes for elem in nx.shortest_path(G, nn, l[0], weight='length'))
                                  ] if len(path) > 1]
@@ -242,9 +262,11 @@ def main():
                 # if nx.shortest_path(G, nn, l[0] , weight='length') in tree_edges_nodes -- cases when the shortest path is different will be cut!!!!
                 # the edge cases that are not covered are when the driver destination is before the leaf node (bc shortest path are only between nodes)
                 # or if the driver decided not to take the shortest path
-                print('----------------------')
-                print(leaves_edges[0][0].length)
-                print((nx.shortest_path_length(G, nn, leaves_edges[0][2],
+                if len(leaves_edges) > 0:
+
+                    print('----------------------')
+                    print(leaves_edges[0][0].length)
+                    print((nx.shortest_path_length(G, nn, leaves_edges[0][2],
                                                weight='length') + start_edge_len - dist) / nx.shortest_path_length(G,
                                                                                                                    leaves_edges[
                                                                                                                        0][
@@ -254,25 +276,25 @@ def main():
                                                                                                                        2],
                                                                                                                    weight='length'))
 
-                mid_edges = [[le[0].interpolate(le[0].length * (
+                    mid_edges = [[le[0].interpolate(le[0].length * (
                         1 - (nx.shortest_path_length(G, nn, le[2],
                                                      weight='length') + start_edge_len - dist) / nx.shortest_path_length(
-                    G, le[1], le[2], weight='length'))), le]
+                        G, le[1], le[2], weight='length'))), le]
                              for le in leaves_edges]
 
-                print('mid_edges ', mid_edges[0][0].x)
+                    print('mid_edges ', mid_edges[0][0].x)
 
-                full_edges = [t for t in tree_edges if
+                    full_edges = [t for t in tree_edges if
                               t[2] not in [l[0] for l in leaves] and t[1] not in [l[0] for l in leaves]]
-                #       print('full_edges',  len(full_edges))
+                    #       print('full_edges',  len(full_edges))
 
-                partial_edges = [LineString([node_to_point(m[1][1]), m[0]]) for m in mid_edges]
-                #        print('partial_edges', len(partial_edges))
+                    partial_edges = [LineString([node_to_point(m[1][1]), m[0]]) for m in mid_edges]
+                    #        print('partial_edges', len(partial_edges))
 
-                edge_points_full = sum([get_edge_points(f) for f in [f[0] for f in full_edges]], [])
-                edge_points_partial = sum([get_edge_points(f) for f in partial_edges], [])
-                edge_points_start = get_edge_points(LineString([start_point, node_to_point(nn)]))
-                print(len(edge_points_full), len(edge_points_partial), len(edge_points_start))
+                    edge_points_full = sum([get_edge_points(f) for f in [f[0] for f in full_edges]], [])
+                    edge_points_partial = sum([get_edge_points(f) for f in partial_edges], [])
+                    edge_points_start = get_edge_points(LineString([start_point, node_to_point(nn)]))
+                    print(len(edge_points_full), len(edge_points_partial), len(edge_points_start))
 
             #    print('edge_points', len(edge_points))
             fig, ax = ox.plot_graph(G, node_color='w', node_edgecolor='k', node_size=1,
@@ -306,6 +328,8 @@ def main():
             for point in edge_points_start:
                 patch = PolygonPatch(point.buffer(0.0002), fc='#aaaaaa', ec='k', linewidth=0, alpha=0.5, zorder=-1)
                 ax.add_patch(patch)
+
+            ox.plot_graph(G)
 
         mongoConnection.dispose()
 
