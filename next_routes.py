@@ -23,6 +23,9 @@ def node_to_point(n):
     dic = G.node[n]
     return (dic['x'], dic['y'])
 
+def shortest_path_length_by_points(G, n1, n2):
+    return geopy.distance.distance(node_to_point(n1) , node_to_point(n2)).m
+
 
 def find_next_tree(nns, former_node, tree_edges, dist):
     global leaves
@@ -34,21 +37,33 @@ def find_next_tree(nns, former_node, tree_edges, dist):
         #        print(nns)
         #        print('former_node', former_node)
         nearest_edges = [e for e in graph_edges if
-                         e[2] != former_node and e[1] == nn[0] or e[1] != former_node and e[2] == nn[0]]
+                         (e[2] != former_node and e[1] == nn[0] and is_reachable(e[1],
+                                                                                 e[2]) and nx.shortest_path_length(G,
+                                                                                                                   e[1],
+                                                                                                                   e[
+                                                                                                                       2]) == 1)
+                         or (e[1] != former_node and e[2] == nn[0] and is_reachable(e[2],
+                                                                                    e[1]) and nx.shortest_path_length(G,
+                                                                                                                      e[
+                                                                                                                          2],
+                                                                                                                      e[
+                                                                                                                          1]) == 1)]
         #        print(nearest_edges)
+        #        print('nearest_edges',nearest_edges)
         tree_edges += nearest_edges
         #        paint_edges(tree_edges)
         nnids = list(set([n for n in sum([[e[1], e[2]] for e in nearest_edges], []) if n != nn[0]]))
-        nnids = [n for n in nnids if is_reachable(n,nn[0])]
-        leaves += [[n, nx.shortest_path_length(G, n, nn[0], weight='length') + nn[1]] for n in nnids if
-                   nx.shortest_path_length(G, n, nn[0], weight='length') + nn[1] > dist]
-        nns_ = [[n, nx.shortest_path_length(G, n, nn[0], weight='length') + nn[1]] for n in nnids if
+        nnids = [n for n in nnids if is_reachable(nn[0], n)]
+        leaves += [[n, shortest_path_length_by_points(G, nn[0], n) + nn[1]] for n in nnids if
+                   is_reachable(n, nn[0]) and shortest_path_length_by_points(G, nn[0], n) + nn[1] > dist]
+        nns_ = [[n, shortest_path_length_by_points(G, nn[0], n) + nn[1]] for n in nnids if
                 n not in [l[0] for l in leaves]]  # problematic in case of rounds
 
         #        print(nns_)
 
         if len(nns_) > 0:
             find_next_tree(nns_, nn[0], tree_edges, dist)
+
 
 def get_edge_points(ls):
     return [ls.interpolate(ls.length*x) for x in [i/int(ls.length*20000) for i in range(int(ls.length*20000))]  ]
@@ -158,16 +173,46 @@ def main():
 
         print('retreiving data from server')
 
-        ids = ids_sessions[0]
-#        ids = ['5d60d4b1d997ab0b6038c85a', '5d60d13fd997ab0b6038c7c8', '5d60d11cd997ab0b6038c6f0']
+        ids = ids_sessions[6]
+        ids=['5db04dee45d6764d7486e7df',
+ '5db04def45d6764d7486f45c',
+ '5db04def45d6764d7486f9ea',
+ '5db04df045d6764d748706a2',
+ '5db04df045d6764d74870935',
+ '5db04df145d6764d748715eb',
+ '5db04df145d6764d74871b90',
+ '5db04df245d6764d7487212e',
+ '5db04df445d6764d74872dd3',
+ '5db04df545d6764d74873366',
+ '5db04df645d6764d748738fe',
+ '5db04df645d6764d74873e89',
+ '5db04df645d6764d74874412',
+ '5db04df745d6764d748750cd',
+ '5db04df845d6764d748756b7',
+ '5db04dfb45d6764d74876362',
+ '5db04dfb45d6764d748768d9',
+ '5db04dfc45d6764d74876e78',
+ '5db04dfc45d6764d74877435',
+ '5db04dfd45d6764d748780ca',
+ '5db04dfd45d6764d74878666',
+ '5db04dfe45d6764d74878c0d',
+ '5db04dff45d6764d74879195',
+ '5db04dff45d6764d74879e4b',
+ '5db04e0045d6764d7487a3db',
+ '5db04e0145d6764d7487a954',
+ '5db04e0145d6764d7487af14',
+ '5db04e0245d6764d7487b4a4',
+ '5db04e0345d6764d7487ba3d',
+ '5db04e0345d6764d7487ce1b']
         print('get_df_for_ids')
 
         df_AS = read_from_mongo.get_df_for_ids(ids)
+        df_AS = df_AS.iloc[8500:12000]
         df_AS = df_AS.sort_values('timestamps_value').reset_index(drop=True)
         df_AS.gps_speed.plot()
         print('dataframe is ready')
 
-        G = Graph_from_dataframe.get_distance_graph(df_AS, 100)
+        G = Graph_from_dataframe.get_distance_graph(df_AS, -10)
 
         G_projected = ox.project_graph(G)
         #    ox.plot_graph(G_projected)
@@ -214,7 +259,7 @@ def main():
         prev = 0
 
         speed_ms = 60
-        dist = 6 * speed_ms
+        dist = 3 * speed_ms
 
         while start < len(walk_pois_df) - 1:
             nn = None
@@ -265,21 +310,12 @@ def main():
                 if len(leaves_edges) > 0:
 
                     print('----------------------')
-                    print(leaves_edges[0][0].length)
-                    print((nx.shortest_path_length(G, nn, leaves_edges[0][2],
-                                               weight='length') + start_edge_len - dist) / nx.shortest_path_length(G,
-                                                                                                                   leaves_edges[
-                                                                                                                       0][
-                                                                                                                       1],
-                                                                                                                   leaves_edges[
-                                                                                                                       0][
-                                                                                                                       2],
-                                                                                                                   weight='length'))
+
 
                     mid_edges = [[le[0].interpolate(le[0].length * (
-                        1 - (nx.shortest_path_length(G, nn, le[2],
-                                                     weight='length') + start_edge_len - dist) / nx.shortest_path_length(
-                        G, le[1], le[2], weight='length'))), le]
+                        1 - (shortest_path_length_by_points(G, nn, le[2]
+                                                     ) + start_edge_len - dist) / shortest_path_length_by_points(
+                        G, le[1], le[2]))), le]
                              for le in leaves_edges]
 
                     print('mid_edges ', mid_edges[0][0].x)
