@@ -36,18 +36,12 @@ def find_next_tree(nns, former_node, tree_edges, dist):
         nns = nns[1:]
         #        print(nns)
         #        print('former_node', former_node)
-        nearest_edges = [e for e in graph_edges if
-                         (e[2] != former_node and e[1] == nn[0] and is_reachable(e[1],
-                                                                                 e[2]) and nx.shortest_path_length(G,
-                                                                                                                   e[1],
-                                                                                                                   e[
-                                                                                                                       2]) == 1)
-                         or (e[1] != former_node and e[2] == nn[0] and is_reachable(e[2],
-                                                                                    e[1]) and nx.shortest_path_length(G,
-                                                                                                                      e[
-                                                                                                                          2],
-                                                                                                                      e[
-                                                                                                                          1]) == 1)]
+
+
+        nearest_edges=[e for e in graph_edges if
+                          (e[2]!=former_node and e[1]==nn[0] and is_reachable(e[1],e[2]) and nx.shortest_path_length(G, e[1] , e[2])==1)
+                       or (e[1]!=former_node and e[2]==nn[0] and is_reachable(e[2],e[1]) and nx.shortest_path_length(G, e[2] , e[1] )==1) ]
+
         #        print(nearest_edges)
         #        print('nearest_edges',nearest_edges)
         tree_edges += nearest_edges
@@ -55,7 +49,7 @@ def find_next_tree(nns, former_node, tree_edges, dist):
         nnids = list(set([n for n in sum([[e[1], e[2]] for e in nearest_edges], []) if n != nn[0]]))
         nnids = [n for n in nnids if is_reachable(nn[0], n)]
         leaves += [[n, shortest_path_length_by_points(G, nn[0], n) + nn[1]] for n in nnids if
-                   is_reachable(n, nn[0]) and shortest_path_length_by_points(G, nn[0], n) + nn[1] > dist]
+                   is_reachable(nn[0],n) and shortest_path_length_by_points(G, nn[0], n) + nn[1] > dist]
         nns_ = [[n, shortest_path_length_by_points(G, nn[0], n) + nn[1]] for n in nnids if
                 n not in [l[0] for l in leaves]]  # problematic in case of rounds
 
@@ -81,6 +75,17 @@ def is_reachable(n1,n2):
     except:
         return False
 
+def is_one_way(e):
+    if not is_reachable(e[1] , e[2]) or nx.shortest_path_length(G, e[1] , e[2]) != 1:
+        if is_reachable(e[2] , e[1]) and nx.shortest_path_length(G, e[2] , e[1]) == 1:
+            return True, (e[2], e[1])
+        else:
+            'Error, parameter is not an edge'
+    elif not is_reachable(e[2] , e[1]) or nx.shortest_path_length(G, e[2] , e[1]) != 1:
+            return True,(e[1], e[2])
+    else:
+        return False,(None,None)
+
 def find_direction(start, walk_pois_df, G):
     prev = start - 1
     start_row = walk_pois_df.iloc[start]
@@ -93,6 +98,8 @@ def find_direction(start, walk_pois_df, G):
 
     if same_edge(nearest_edge_start, nearest_edge_prev):
         #        print('same edge')
+        is_ow, (former_node,next_node) = is_one_way(nearest_edge_start)
+
         dist_fn_start = geopy.distance.distance(
             (nearest_edge_start[0].coords[0][0], nearest_edge_start[0].coords[0][1]), start_point).m
 
@@ -174,36 +181,76 @@ def main():
         print('retreiving data from server')
 
         ids = ids_sessions[6]
-        ids=['5db04dee45d6764d7486e7df',
- '5db04def45d6764d7486f45c',
- '5db04def45d6764d7486f9ea',
- '5db04df045d6764d748706a2',
- '5db04df045d6764d74870935',
- '5db04df145d6764d748715eb',
- '5db04df145d6764d74871b90',
- '5db04df245d6764d7487212e',
- '5db04df445d6764d74872dd3',
- '5db04df545d6764d74873366',
- '5db04df645d6764d748738fe',
- '5db04df645d6764d74873e89',
- '5db04df645d6764d74874412',
- '5db04df745d6764d748750cd',
- '5db04df845d6764d748756b7',
- '5db04dfb45d6764d74876362',
- '5db04dfb45d6764d748768d9',
- '5db04dfc45d6764d74876e78',
- '5db04dfc45d6764d74877435',
- '5db04dfd45d6764d748780ca',
- '5db04dfd45d6764d74878666',
- '5db04dfe45d6764d74878c0d',
- '5db04dff45d6764d74879195',
- '5db04dff45d6764d74879e4b',
- '5db04e0045d6764d7487a3db',
- '5db04e0145d6764d7487a954',
- '5db04e0145d6764d7487af14',
- '5db04e0245d6764d7487b4a4',
- '5db04e0345d6764d7487ba3d',
- '5db04e0345d6764d7487ce1b']
+        ids=['5db00a4345d6764d7480fd4b',
+         '5db00a4445d6764d7480fd6d',
+         '5db00a4545d6764d748104a9',
+         '5db00a4645d6764d74810be8',
+         '5db00a4745d6764d74811326',
+         '5db00a4745d6764d74811a65',
+         '5db00a4c45d6764d748121a7',
+         '5db00a4d45d6764d748128e9',
+         '5db00a4e45d6764d7481302c',
+         '5db00a4e45d6764d7481376b',
+         '5db00a4f45d6764d74813eaa',
+         '5db00a4f45d6764d748145ab',
+         '5db00a5045d6764d74814ce5',
+         '5db00a5245d6764d74815426',
+         '5db00a5245d6764d74815b64',
+         '5db00a5345d6764d748162a8',
+         '5db00a5345d6764d748169e8',
+         '5db00a5445d6764d7481712a',
+         '5db00a5445d6764d7481786c',
+         '5db00a5545d6764d74817fad',
+         '5db00a5545d6764d748186ef',
+         '5db00a5745d6764d74818e28',
+         '5db00a5845d6764d7481955e',
+         '5db00a5845d6764d74819ca2',
+         '5db00a5945d6764d7481a3e6',
+         '5db00a5945d6764d7481ab24',
+         '5db00a5a45d6764d7481b264',
+         '5db00a5c45d6764d7481b9a3',
+         '5db00a5c45d6764d7481c0e3',
+         '5db00a5d45d6764d7481c826',
+         '5db00a5d45d6764d7481cf67',
+         '5db00a5e45d6764d7481d6a5',
+         '5db00a5f45d6764d7481dde0',
+         '5db00a5f45d6764d7481e520',
+         '5db00a6145d6764d7481ec62',
+         '5db00a6145d6764d7481f397',
+         '5db00a6245d6764d7481fad7',
+         '5db00a6345d6764d74820219',
+         '5db00a6345d6764d74820955',
+         '5db00a6445d6764d74821094',
+         '5db00a6445d6764d748217d4',
+         '5db00a6645d6764d74821f12',
+         '5db00a6645d6764d7482264a',
+         '5db00a6745d6764d74822d8e',
+         '5db00a6745d6764d748234cf',
+         '5db00a6845d6764d74823c15',
+         '5db00a6945d6764d74824354',
+         '5db00a6b45d6764d74824a98',
+         '5db00a6d45d6764d748251d9',
+         '5db00a6d45d6764d7482591b',
+         '5db00a6e45d6764d7482605a',
+         '5db00a6e45d6764d74826790',
+         '5db00a6f45d6764d74826ec8',
+         '5db00a6f45d6764d748275f8',
+         '5db00a7045d6764d74827d35',
+         '5db00a7145d6764d74828475',
+         '5db00a7145d6764d74828bb6',
+         '5db00a7245d6764d748292f4',
+         '5db00a7245d6764d74829a37',
+         '5db00a7345d6764d7482a179',
+         '5db00a7345d6764d7482a8b9',
+         '5db00a7545d6764d7482afef',
+         '5db00a7545d6764d7482b05f',
+         '5db00a7645d6764d7482b7a8',
+         '5db00a7645d6764d7482bef0',
+         '5db00a7745d6764d7482c639',
+         '5db00a7d45d6764d7482cd85',
+         '5db00b7045d6764d7482cdee',
+         '5db00bac45d6764d7482ce13']
+        print('get_df_for_ids')
         print('get_df_for_ids')
 
         df_AS = read_from_mongo.get_df_for_ids(ids)
