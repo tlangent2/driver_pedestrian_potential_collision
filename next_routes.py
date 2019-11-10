@@ -30,7 +30,9 @@ def snap_locations_to_road(path_df):
     path_df['point_location'] = tuple(zip(path_df['gps_latitude'], path_df['gps_longitude']))
     strlocs = str(list(path_df['point_location']))[2:-2].replace('), (', '|').replace(', ', ',')
 
-    api_key = 'AIzaSyBBYVg8i8oh8syurQ1K3jxUgkTMd3sL8FI'
+    file = open('api_key.txt', 'r')
+    api_key=file.read()
+
 
     response = requests.get(
         'https://roads.googleapis.com/v1/snapToRoads?path=' + strlocs + '&interpolate=false&key=' + api_key)
