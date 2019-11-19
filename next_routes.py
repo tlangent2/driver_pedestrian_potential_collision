@@ -7,7 +7,6 @@ import datetime
 import getopt
 import traceback
 import timerange_for_user
-import read_from_mongo
 import Graph_from_dataframe
 import osmnx as ox
 
