@@ -1,8 +1,7 @@
 import sys
-import connect_to_db as mongoConnection
+
 import pandas as pd
 
-import hostnameManager
 import datetime
 import getopt
 import traceback
@@ -23,7 +22,7 @@ from shapely.ops import split
 import itertools
 
 import requests
-
+import read_from_mongo
 
 def snap_locations_to_road(path_df):
     path_df['point_location'] = tuple(zip(path_df['gps_latitude'], path_df['gps_longitude']))
@@ -251,7 +250,7 @@ def main():
                 sys.exit()
             elif o in ('-s', '--server_type'):
                 connectiontype = a
-                hostname = hostnameManager.getHostName(a)
+                hostname = read_from_mongo.hostnameManager.getHostName(a)
             elif o in ('-u', '--userid'):
                 user_id = a
             elif o in ('-d', '--date'):
@@ -261,16 +260,17 @@ def main():
         date = datetime.datetime.today().strftime("%Y-%m-%d")
 
     print('\nHostname is: ' + hostname)
-    if mongoConnection.connectToDB(connectiontype):
+    mc = read_from_mongo.mongoConnection()
+    if mc.connectToDB(connectiontype):
         print(hostname, date, user_id)
         start_date = (datetime.datetime.fromisoformat(date) - datetime.timedelta(days=1)).strftime(
             "%Y-%m-%d") + " 00:00:00+0000"
         end_date = date + " 00:00:00+0000"
         print(user_id, start_date, end_date)
-        ids_sessions = timerange_for_user.get_id_list_from_user(user_id, start_date, end_date)
+        ids_sessions = timerange_for_user.get_id_list_from_user(mc, user_id, start_date, end_date)
         if len(ids_sessions) == 0:
             print('no data for this input')
-            return
+#            return
         print(ids_sessions)
 
         print('retreiving data from server')
@@ -348,7 +348,7 @@ def main():
         print('get_df_for_ids')
         print('get_df_for_ids')
 
-        df_AS = read_from_mongo.get_df_for_ids(ids)
+        df_AS = read_from_mongo.get_df_for_ids(mc,ids)
         df_AS = df_AS.iloc[22400:24000]
         df_AS = df_AS.sort_values('timestamps_value').reset_index(drop=True)
         df_AS.gps_speed.plot()
