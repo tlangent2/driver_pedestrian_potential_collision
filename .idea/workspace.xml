@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="">
+    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="change data_from_mongo structure to classes">
+      <change beforePath="$PROJECT_DIR$/../OSM_graph_manager/.idea/OSM Graph manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../OSM_graph_manager/.idea/OSM_Graph_manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OSM_graph_manager/Graph_from_dataframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/../OSM_graph_manager/graph_from_dataframe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/.idea/viziblezone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/.idea/crossing_statistics.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_from_mongo/connect_to_db.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_from_mongo/hostnameManager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/.idea/data_from_mongo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/.idea/data_from_mongo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/next_routes.py" afterDir="false" />
     </list>
@@ -17,17 +19,33 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../OSM_graph_manager" />
   </component>
   <component name="ProjectId" id="1S71mLGEVVeavyCX9nmhmHjarNo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OSM_graph_manager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tlang\PycharmProjects\VisibleZone\OSM_graph_manager" />
       <recent name="C:\Users\tlang\PycharmProjects\VisibleZone\data_from_mongo" />
     </key>
   </component>
@@ -44,19 +62,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.next_routes">
-    <configuration name="connect_to_db" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="data_from_mongo" />
+    <configuration name="check_crossing_and_speed" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../data_from_mongo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../crossing_statistics" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../data_from_mongo/connect_to_db.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -66,7 +84,7 @@
       <method v="2" />
     </configuration>
     <configuration name="daily_crossing_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="viziblezone" />
+      <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -79,6 +97,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" />
       <option name="PARAMETERS" value="-s prod" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="graph_from_dataframe" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="OSM_Graph_manager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../OSM_graph_manager" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\tlang\PycharmProjects\VisibleZone\OSM_graph_manager\graph_from_dataframe.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -128,41 +167,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="timerange_for_user" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="data_from_mongo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../data_from_mongo" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.daily_crossing_info" />
       <item itemvalue="Python.next_routes" />
-      <item itemvalue="Python.timerange_for_user" />
-      <item itemvalue="Python.connect_to_db" />
       <item itemvalue="Python.read_from_mongo" />
+      <item itemvalue="Python.check_crossing_and_speed" />
+      <item itemvalue="Python.graph_from_dataframe" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.next_routes" />
         <item itemvalue="Python.daily_crossing_info" />
+        <item itemvalue="Python.check_crossing_and_speed" />
+        <item itemvalue="Python.graph_from_dataframe" />
         <item itemvalue="Python.read_from_mongo" />
-        <item itemvalue="Python.timerange_for_user" />
-        <item itemvalue="Python.connect_to_db" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +209,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574183972999</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="change data_from_mongo structure to classes">
+      <created>1574268426795</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574268426795</updated>
+    </task>
+    <task id="LOCAL-00004" summary="make the imports to be compatible to run also with pip installed data_from_mongo">
+      <created>1574366780251</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574366780251</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,20 +242,42 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="remove __init__  files" />
     <MESSAGE value="fit to data_from_mongo new structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fit to data_from_mongo new structure" />
+    <MESSAGE value="change data_from_mongo structure to classes" />
+    <MESSAGE value="make the imports to be compatible to run also with pip installed data_from_mongo" />
+    <option name="LAST_COMMIT_MESSAGE" value="make the imports to be compatible to run also with pip installed data_from_mongo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>11</line>
+          <line>15</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>94</line>
+          <line>98</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

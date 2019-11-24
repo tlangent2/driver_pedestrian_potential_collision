@@ -1,3 +1,8 @@
+'''
+file = open('api_key.txt', 'r')
+api_key = file.read()
+
+'''
 import sys
 
 import pandas as pd
@@ -6,7 +11,6 @@ import datetime
 import getopt
 import traceback
 import timerange_for_user
-import Graph_from_dataframe
 import osmnx as ox
 
 from descartes.patch import PolygonPatch
@@ -22,14 +26,23 @@ from shapely.ops import split
 import itertools
 
 import requests
-import read_from_mongo
+
+from shapely.geometry import LineString, Point
+try:
+    from OSM_graph_manager import graph_from_dataframe
+    from data_from_mongo import read_from_mongo
+
+except:
+    import graph_from_dataframe
+    import read_from_mongo
+
+
 
 def snap_locations_to_road(path_df):
     path_df['point_location'] = tuple(zip(path_df['gps_latitude'], path_df['gps_longitude']))
     strlocs = str(list(path_df['point_location']))[2:-2].replace('), (', '|').replace(', ', ',')
 
-    file = open('api_key.txt', 'r')
-    api_key=file.read()
+
 
 
     response = requests.get(
@@ -355,7 +368,7 @@ def main():
 
         print('dataframe is ready')
 
-        G = Graph_from_dataframe.get_distance_graph(df_AS, 300)
+        G = graph_from_dataframe.get_distance_graph(df_AS, 300)
 
         G_projected = ox.project_graph(G)
         #    ox.plot_graph(G_projected)
