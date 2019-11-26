@@ -356,13 +356,10 @@ while True:
     if len(path_df) < 2:
         continue
     newloc = (path_df.iloc[-1]['gps_latitude'], path_df.iloc[-1]['gps_longitude'])
-
     if G is None or ge.Point(tuple(reversed(newloc))).distance(
             ox.utils.get_nearest_edge(G, tuple(reversed(newloc)))[0]) * 10000 > 30:
         G = ox.graph_from_point(newloc, distance=3000, network_type='drive', simplify=False)
-        fig, ax = ox.plot_graph(G, fig_height=10,
-                                show=False, close=False,
-                                edge_color='#777777')
+
         gdf = ox.graph_to_gdfs(G, nodes=False, fill_edge_geometry=True)
         graph_edges = gdf[["geometry", "u", "v"]].values.tolist()
 
@@ -373,8 +370,8 @@ while True:
         continue
 
     nn = next_node
-    path_df.loc[path_df.index[-1], 'next_node'] = next_node
 
+    path_df.loc[path_df.index[-1], 'next_node'] = next_node
 
     if discontinuity_detected(path_df):
         path_df.loc[path_df.index[-1], 'next_node'] = None
@@ -400,12 +397,9 @@ while True:
     partial_edges = []
     repaint = False
     if start_edge_len > dist:
-
         only_edge = LineString([start_point, node_to_point(nn)])
-
         only_edge = LineString([start_point, only_edge.interpolate(
             only_edge.length * dist / geopy.distance.distance(start_point, node_to_point(nn)).m)])
-
         print('start_edge_len', start_edge_len)
         first_mid_edge = only_edge
         repaint = True
@@ -505,6 +499,9 @@ while True:
                 sector = [s for s in split(circle, splitter) if s.area == minarea][0]
 
                 print('repaint', nn)
+                fig, ax = ox.plot_graph(G, fig_height=10,
+                                        show=False, close=False,
+                                        edge_color='#777777')
 
                 patch = PolygonPatch(Point(poi).buffer(0.0003), fc='#0f800f', ec='k', linewidth=0, alpha=0.5, zorder=-1)
                 ax.add_patch(patch)
@@ -546,12 +543,10 @@ while True:
                 patch = PolygonPatch(line.buffer(b), fc='#0f899f', ec='k', linewidth=0, alpha=0.5, zorder=-1)
                 ax.add_patch(patch)
 
-
-
             patch = PolygonPatch(first_mid_edge.buffer(b), fc='#ffff00', ec='k', linewidth=0, alpha=0.5, zorder=-1)
             ax.add_patch(patch)
 
-            plt.close('all')
+            plt.show(block=False)
 
             intersections = [sector.intersection(e) for e in full_edges + partial_edges + [first_mid_edge] if
                              type(sector.intersection(e)) is LineString]
@@ -568,6 +563,4 @@ while True:
 
         except:
             s.close()
-
-
 
