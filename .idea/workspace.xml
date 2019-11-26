@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="next_routes as server">
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_for_one_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_for_one_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route_predicament.py" beforeDir="false" afterPath="$PROJECT_DIR$/route_predicament.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574698831484</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix  RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface...">
+      <created>1574759892418</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574759892418</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,7 +264,8 @@
     <MESSAGE value="make the imports to be compatible to run also with pip installed data_from_mongo" />
     <MESSAGE value="next_routes as server" />
     <MESSAGE value="change script name" />
-    <option name="LAST_COMMIT_MESSAGE" value="change script name" />
+    <MESSAGE value="fix  RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface..." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix  RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

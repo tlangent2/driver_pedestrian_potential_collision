@@ -478,6 +478,9 @@ while True:
         try:
             b = 0.0006
 
+            fig, ax = ox.plot_graph(G, fig_height=10,
+                                    show=False, close=False,
+                                    edge_color='#777777')
             for p in pedestrians:
 
                 poi = Point(p['gps_longitude'], p['gps_latitude'])
@@ -497,11 +500,6 @@ while True:
                 minarea = sorted([s.area for s in split(circle, splitter)])[
                     -2]  # sometimes it spits to three, third one looks empty
                 sector = [s for s in split(circle, splitter) if s.area == minarea][0]
-
-                print('repaint', nn)
-                fig, ax = ox.plot_graph(G, fig_height=10,
-                                        show=False, close=False,
-                                        edge_color='#777777')
 
                 patch = PolygonPatch(Point(poi).buffer(0.0003), fc='#0f800f', ec='k', linewidth=0, alpha=0.5, zorder=-1)
                 ax.add_patch(patch)
