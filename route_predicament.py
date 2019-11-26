@@ -481,6 +481,32 @@ while True:
             fig, ax = ox.plot_graph(G, fig_height=10,
                                     show=False, close=False,
                                     edge_color='#777777')
+
+            patch = PolygonPatch(Point(prev_point).buffer(b), fc='#9900ff', ec='k', linewidth=0, alpha=0.5, zorder=-1)
+            ax.add_patch(patch)
+
+            patch = PolygonPatch(Point(start_point).buffer(b), fc='#ff00aa', ec='k', linewidth=0, alpha=0.5, zorder=-1)
+            ax.add_patch(patch)
+
+            patch = PolygonPatch(Point(G.nodes[next_node]['x'], G.nodes[next_node]['y']).buffer(b), fc='#0000ff',
+                                 ec='k', linewidth=0, alpha=0.5, zorder=-1)
+            ax.add_patch(patch)
+
+            for point in [Point(G.nodes[l[0]]['x'], G.nodes[l[0]]['y']) for l in leaves]:
+                patch = PolygonPatch(point.buffer(b), fc='#00ffff', ec='k', linewidth=0, alpha=0.5, zorder=-1)
+                ax.add_patch(patch)
+
+            for line in full_edges:
+                patch = PolygonPatch(line.buffer(b), fc='#0f800f', ec='k', linewidth=0, alpha=0.5, zorder=-1)
+                ax.add_patch(patch)
+
+            for line in partial_edges:
+                patch = PolygonPatch(line.buffer(b), fc='#0f899f', ec='k', linewidth=0, alpha=0.5, zorder=-1)
+                ax.add_patch(patch)
+
+            patch = PolygonPatch(first_mid_edge.buffer(b), fc='#ffff00', ec='k', linewidth=0, alpha=0.5, zorder=-1)
+            ax.add_patch(patch)
+
             for p in pedestrians:
 
                 poi = Point(p['gps_longitude'], p['gps_latitude'])
@@ -519,43 +545,25 @@ while True:
                     patch = PolygonPatch(line.buffer(0.0008), fc='#000000', ec='k', linewidth=0, alpha=0.5, zorder=-1)
                     ax.add_patch(patch)
 
-            patch = PolygonPatch(Point(prev_point).buffer(b), fc='#9900ff', ec='k', linewidth=0, alpha=0.5, zorder=-1)
-            ax.add_patch(patch)
+                    # this code will prevent from the graphs to be displayed.  enable it when you need the intersection results as linestring rather then graphs
+                '''                 
+                intersections = [sector.intersection(e) for e in full_edges+partial_edges+[first_mid_edge] if type(sector.intersection(e)) is LineString]
+                print('sector.intersection ', intersections)
 
-            patch = PolygonPatch(Point(start_point).buffer(b), fc='#ff00aa', ec='k', linewidth=0, alpha=0.5, zorder=-1)
-            ax.add_patch(patch)
+                if(len(intersections) > 0):
+                    road_ls = intersections[0]
+                    road_ls = getExtrapoledLine(road_ls.coords[0] , road_ls.coords[1], EXTRAPOL_RATIO = 5)
+                    walk_ls = getExtrapoledLine(walk_ls.coords[0] , walk_ls.coords[1], EXTRAPOL_RATIO = 5)
 
-            patch = PolygonPatch(Point(G.nodes[next_node]['x'], G.nodes[next_node]['y']).buffer(b), fc='#0000ff',
-                                 ec='k', linewidth=0, alpha=0.5, zorder=-1)
-            ax.add_patch(patch)
 
-            for point in [Point(G.nodes[l[0]]['x'], G.nodes[l[0]]['y']) for l in leaves]:
-                patch = PolygonPatch(point.buffer(b), fc='#00ffff', ec='k', linewidth=0, alpha=0.5, zorder=-1)
-                ax.add_patch(patch)
+                angle = getAngle(ls1.coords[0], tuple(ls1.intersection(ls2).coords)[0] ,ls2.coords[1])
+                print('crossing angle: ', angle)
 
-            for line in full_edges:
-                patch = PolygonPatch(line.buffer(b), fc='#0f800f', ec='k', linewidth=0, alpha=0.5, zorder=-1)
-                ax.add_patch(patch)
-
-            for line in partial_edges:
-                patch = PolygonPatch(line.buffer(b), fc='#0f899f', ec='k', linewidth=0, alpha=0.5, zorder=-1)
-                ax.add_patch(patch)
-
-            patch = PolygonPatch(first_mid_edge.buffer(b), fc='#ffff00', ec='k', linewidth=0, alpha=0.5, zorder=-1)
-            ax.add_patch(patch)
+                '''
 
             plt.show(block=False)
 
-            intersections = [sector.intersection(e) for e in full_edges + partial_edges + [first_mid_edge] if
-                             type(sector.intersection(e)) is LineString]
-            print('sector.intersection ', intersections)
-            if (len(intersections) > 0):
-                road_ls = intersections[0]
-                road_ls = getExtrapoledLine(road_ls.coords[0], road_ls.coords[1], EXTRAPOL_RATIO=5)
-                walk_ls = getExtrapoledLine(walk_ls.coords[0], walk_ls.coords[1], EXTRAPOL_RATIO=5)
 
-                angle = getAngle(ls1.coords[0], tuple(ls1.intersection(ls2).coords)[0], ls2.coords[1])
-                print('crossing angle: ', angle)
 
 
 

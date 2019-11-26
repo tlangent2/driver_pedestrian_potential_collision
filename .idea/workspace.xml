@@ -242,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574759892418</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="move fig, ax =">
+      <created>1574760456943</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574760456943</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,7 +272,8 @@
     <MESSAGE value="next_routes as server" />
     <MESSAGE value="change script name" />
     <MESSAGE value="fix  RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface..." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix  RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface..." />
+    <MESSAGE value="move fig, ax =" />
+    <option name="LAST_COMMIT_MESSAGE" value="move fig, ax =" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
