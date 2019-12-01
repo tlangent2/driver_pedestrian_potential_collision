@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="next_routes as server">
-      <change afterPath="$PROJECT_DIR$/tester.py" afterDir="false" />
+    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="add tester - sending every second the new location of the car and the pedestrians nearby">
+      <change beforePath="$PROJECT_DIR$/../OSM_graph_manager/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OSM_graph_manager/MANIFEST" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OSM_graph_manager/graph_from_dataframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/../OSM_graph_manager/graph_from_dataframe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OSM_graph_manager/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OSM_graph_manager/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/create_daily_videos.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/create_daily_videos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_for_one_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_for_one_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route_predicament.py" beforeDir="false" afterPath="$PROJECT_DIR$/route_predicament.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/tester.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +31,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../data_from_mongo" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../crossing_statistics" />
   </component>
   <component name="ProjectId" id="1S71mLGEVVeavyCX9nmhmHjarNo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -55,8 +65,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tester">
-    <configuration name="check_crossing_and_speed" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.daily_crossing_info">
+    <configuration name="create_daily_videos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -68,8 +78,29 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/create_daily_videos.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="crossing_log_viewer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="crossing_statistics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../crossing_statistics" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" />
+      <option name="PARAMETERS" value="-s prod" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -98,28 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="graph_from_dataframe" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="OSM_Graph_manager" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../OSM_graph_manager" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\tlang\PycharmProjects\VisibleZone\OSM_graph_manager\graph_from_dataframe.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="next_routes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="route_predicament" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="driver_pedestrian_potential_collision" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -131,7 +141,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\tlang\PycharmProjects\VisibleZone\driver_pedestrian_potential_collision\route_predicament.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/route_predicament.py" />
       <option name="PARAMETERS" value="-s prod" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,18 +173,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.daily_crossing_info" />
-      <item itemvalue="Python.next_routes" />
-      <item itemvalue="Python.check_crossing_and_speed" />
-      <item itemvalue="Python.graph_from_dataframe" />
       <item itemvalue="Python.tester" />
+      <item itemvalue="Python.create_daily_videos" />
+      <item itemvalue="Python.crossing_log_viewer" />
+      <item itemvalue="Python.route_predicament" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tester" />
-        <item itemvalue="Python.next_routes" />
         <item itemvalue="Python.daily_crossing_info" />
-        <item itemvalue="Python.check_crossing_and_speed" />
-        <item itemvalue="Python.graph_from_dataframe" />
+        <item itemvalue="Python.route_predicament" />
+        <item itemvalue="Python.crossing_log_viewer" />
+        <item itemvalue="Python.create_daily_videos" />
+        <item itemvalue="Python.tester" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +269,42 @@
       <option name="project" value="LOCAL" />
       <updated>1574762507475</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add tester - sending every second the new location of the car and the pedestrians nearby">
+      <created>1574764965377</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1574764965377</updated>
+    </task>
+    <task id="LOCAL-00012" summary="crossings_info_from_df should always return the same variables">
+      <created>1574768716010</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1574768716010</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add logs to walking_session">
+      <created>1574865421063</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1574865421063</updated>
+    </task>
+    <task id="LOCAL-00014" summary="crossing log viewer">
+      <created>1574937051622</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1574937051622</updated>
+    </task>
+    <task id="LOCAL-00015" summary="crossing log will download pictures by the filter of the log df instead of their own dates">
+      <created>1574958165778</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1574958165778</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,7 +329,12 @@
     <MESSAGE value="fix  RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface..." />
     <MESSAGE value="move fig, ax =" />
     <MESSAGE value="add commented code to get intersection result for each pedestrian.  uncommenting this code will prevent the graphs from being displayed.  enable it when you need the intersection results as linestring rather then graphs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add commented code to get intersection result for each pedestrian.  uncommenting this code will prevent the graphs from being displayed.  enable it when you need the intersection results as linestring rather then graphs" />
+    <MESSAGE value="add tester - sending every second the new location of the car and the pedestrians nearby" />
+    <MESSAGE value="crossings_info_from_df should always return the same variables" />
+    <MESSAGE value="add logs to walking_session" />
+    <MESSAGE value="crossing log viewer" />
+    <MESSAGE value="crossing log will download pictures by the filter of the log df instead of their own dates" />
+    <option name="LAST_COMMIT_MESSAGE" value="crossing log will download pictures by the filter of the log df instead of their own dates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -295,29 +345,29 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
-          <line>12</line>
+          <line>10</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
-          <line>35</line>
+          <line>33</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
-          <line>86</line>
+          <line>81</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
-          <line>117</line>
+          <line>112</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>193</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
