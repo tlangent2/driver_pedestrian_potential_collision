@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../osm_graph_manager/.idea/OSM_Graph_manager.iml" filepath="$PROJECT_DIR$/../osm_graph_manager/.idea/OSM_Graph_manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/../crossing_statistics/.idea/crossing_statistics.iml" filepath="$PROJECT_DIR$/../crossing_statistics/.idea/crossing_statistics.iml" />
       <module fileurl="file://$PROJECT_DIR$/../data_from_mongo/.idea/data_from_mongo.iml" filepath="$PROJECT_DIR$/../data_from_mongo/.idea/data_from_mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" filepath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../osm_graph_manager/.idea/osm_graph_manager.iml" filepath="$PROJECT_DIR$/../osm_graph_manager/.idea/osm_graph_manager.iml" />
     </modules>
   </component>
 </project>

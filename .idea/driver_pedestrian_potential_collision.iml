@@ -4,6 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="data_from_mongo" />
-    <orderEntry type="module" module-name="OSM_Graph_manager" />
+    <orderEntry type="module" module-name="osm_graph_manager" />
   </component>
 </module>
