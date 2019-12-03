@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="change naming conventions to python where needed">
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/.idea/crossing_statistics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/.idea/crossing_statistics.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../osm_graph_manager/.idea/OSM_Graph_manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../osm_graph_manager/.idea/osm_graph_manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -323,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575368862176</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="change naming conventions to python where needed">
+      <created>1575369145324</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1575369145324</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
