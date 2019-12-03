@@ -272,8 +272,8 @@ ids=ids_sessions[0]
 
 
 print('get_df_for_ids')
-mc = read_from_mongo.mongoConnection()
-if not mc.connectToDB('prod'):
+mc = read_from_mongo.MongoConnection()
+if not mc.connect('prod'):
     print ("cannot connect to server")
 
 df_AS=read_from_mongo.get_df_for_ids(mc,ids)

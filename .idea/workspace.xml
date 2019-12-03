@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="add tester - sending every second the new location of the car and the pedestrians nearby">
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/create_daily_videos.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/create_daily_videos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_for_one_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_for_one_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/email_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/email_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/report_status_by_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/report_status_by_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route_predicament.py" beforeDir="false" afterPath="$PROJECT_DIR$/route_predicament.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/tester.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +28,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../crossing_statistics" />
   </component>
   <component name="ProjectId" id="1S71mLGEVVeavyCX9nmhmHjarNo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -56,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.route_predicament">
+  <component name="RunManager" selected="Python.daily_crossing_info">
     <configuration name="create_daily_videos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,8 +177,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.route_predicament" />
         <item itemvalue="Python.daily_crossing_info" />
+        <item itemvalue="Python.route_predicament" />
         <item itemvalue="Python.crossing_log_viewer" />
         <item itemvalue="Python.create_daily_videos" />
         <item itemvalue="Python.tester" />
@@ -302,7 +308,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575196958955</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="server returns collision response to sender">
+      <created>1575361374684</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1575361374684</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add tester - sending every second the new location of the car and the pedestrians nearby">
+      <created>1575368420568</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1575368420568</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -327,13 +347,14 @@
     <MESSAGE value="fix  RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface..." />
     <MESSAGE value="move fig, ax =" />
     <MESSAGE value="add commented code to get intersection result for each pedestrian.  uncommenting this code will prevent the graphs from being displayed.  enable it when you need the intersection results as linestring rather then graphs" />
-    <MESSAGE value="add tester - sending every second the new location of the car and the pedestrians nearby" />
     <MESSAGE value="crossings_info_from_df should always return the same variables" />
     <MESSAGE value="add logs to walking_session" />
     <MESSAGE value="crossing log viewer" />
     <MESSAGE value="crossing log will download pictures by the filter of the log df instead of their own dates" />
     <MESSAGE value="remove pyqtree&#10;add crossing_locations in images" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove pyqtree&#10;add crossing_locations in images" />
+    <MESSAGE value="server returns collision response to sender" />
+    <MESSAGE value="add tester - sending every second the new location of the car and the pedestrians nearby" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tester - sending every second the new location of the car and the pedestrians nearby" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
