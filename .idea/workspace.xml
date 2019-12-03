@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="change naming conventions to python where needed">
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../osm_graph_manager/graph_from_dataframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/../osm_graph_manager/graph_from_dataframe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/MANIFEST" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/MANIFEST" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route_predicament.py" beforeDir="false" afterPath="$PROJECT_DIR$/route_predicament.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../osm_graph_manager" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../crossing_statistics" />
   </component>
   <component name="ProjectId" id="1S71mLGEVVeavyCX9nmhmHjarNo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.graph_from_dataframe">
+  <component name="RunManager" selected="Python.route_predicament">
     <configuration name="create_daily_videos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,9 +169,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.route_predicament" />
         <item itemvalue="Python.graph_from_dataframe" />
         <item itemvalue="Python.daily_crossing_info" />
-        <item itemvalue="Python.route_predicament" />
         <item itemvalue="Python.crossing_log_viewer" />
         <item itemvalue="Python.create_daily_videos" />
       </list>
@@ -335,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575369693481</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="remove unnecessary import">
+      <created>1575369831635</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1575369831635</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -368,7 +375,8 @@
     <MESSAGE value="server returns collision response to sender" />
     <MESSAGE value="add tester - sending every second the new location of the car and the pedestrians nearby" />
     <MESSAGE value="change naming conventions to python where needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="change naming conventions to python where needed" />
+    <MESSAGE value="remove unnecessary import" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessary import" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -55,7 +55,7 @@ import socket
 
 
 try:
-    from OSM_graph_manager import graph_from_dataframe
+    from osm_graph_manager import graph_from_dataframe
     from data_from_mongo import read_from_mongo
 
 except:
