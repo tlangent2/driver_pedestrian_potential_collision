@@ -264,7 +264,7 @@ def snap_locations_to_road():
 def getExtrapoledLine(p1, p2, EXTRAPOL_RATIO=2):
     'Creates a line extrapoled in p1->p2 direction'
 
-    a = p1
+    a = (p1[0] - EXTRAPOL_RATIO * (p2[0] - p1[0]), p1[1] - EXTRAPOL_RATIO * (p2[1] - p1[1]))
     b = (p1[0] + EXTRAPOL_RATIO * (p2[0] - p1[0]), p1[1] + EXTRAPOL_RATIO * (p2[1] - p1[1]))
     return LineString([a, b])
 
@@ -315,6 +315,8 @@ while True:
 
     # Start a new thread and return its identifier
     print(len(path_df))
+    print('waiting for data')
+
     data = c.recv(1024)
     if not data:
         print('Bye')
@@ -327,7 +329,6 @@ while True:
     #        data = data[::-1]
     print(data)
     # send back reversed string to client
-    c.send('Got it'.encode('ascii'))
 
     jsns = ['{' + j + '}' for j in data.decode("ascii").split('}{')]
 
@@ -338,7 +339,8 @@ while True:
 
     packets = [json.loads(j) for j in jsns]
 
-    pedestrians = [p['pedestrians'] for p in packets if p['id'] == max([p['id'] for p in packets])][0]
+    packet_id = max([p['id'] for p in packets])
+    pedestrians = [p['pedestrians'] for p in packets if p['id'] == packet_id][0]
 
     sorted(packets, key=lambda i: i['id'])
     drivers = [p['driver'] for p in packets]
@@ -353,6 +355,7 @@ while True:
     nn = None
 
     if len(path_df) < 2:
+        c.send('Got it'.encode('ascii'))
         continue
     newloc = (path_df.iloc[-1]['gps_latitude'], path_df.iloc[-1]['gps_longitude'])
     if G is None or ge.Point(tuple(reversed(newloc))).distance(
@@ -366,6 +369,8 @@ while True:
 
     former_node, next_node, start_point, prev_point = find_direction()
     if next_node is None:
+        c.send('Got it'.encode('ascii'))
+
         continue
 
     nn = next_node
@@ -386,6 +391,8 @@ while True:
 
         if next_node is None or discontinuity_detected(path_df):
             print('Warning: discontinuity detected in snapped locations')
+            c.send('Got it'.encode('ascii'))
+
             continue
 
     print(former_node, nn, '************************')
@@ -471,8 +478,13 @@ while True:
             repaint = True
         else:
             print('no leaves edges')
+    if not repaint:
+        c.send('Got it'.encode('ascii'))
 
-    if repaint:
+    else:
+        if len(pedestrians) == 0:
+            c.send('No pedestrians'.encode('ascii'))
+            continue
 
         try:
             b = 0.0006
@@ -506,8 +518,9 @@ while True:
             patch = PolygonPatch(first_mid_edge.buffer(b), fc='#ffff00', ec='k', linewidth=0, alpha=0.5, zorder=-1)
             ax.add_patch(patch)
 
+            answer = {'id': packet_id, 'pedestrians': []}
             for p in pedestrians:
-
+                ped_dict = {'id': p['id']}
                 poi = Point(p['gps_longitude'], p['gps_latitude'])
                 direction_point = find_target_point(poi, (180 + p['gps_azimuth']) % 360, 70000)
 
@@ -544,28 +557,35 @@ while True:
                     patch = PolygonPatch(line.buffer(0.0008), fc='#000000', ec='k', linewidth=0, alpha=0.5, zorder=-1)
                     ax.add_patch(patch)
 
-                    # this code will prevent from the graphs to be displayed.  enable it when you need the intersection results as linestring rather then graphs
-                '''                 
-                intersections = [sector.intersection(e) for e in full_edges+partial_edges+[first_mid_edge] if type(sector.intersection(e)) is LineString]
+                intersections = [sector.intersection(e) for e in full_edges + partial_edges + [first_mid_edge] if
+                                 type(sector.intersection(e)) is LineString]
                 print('sector.intersection ', intersections)
+                ped_dict['collision'] = len(intersections) > 0
+                if (len(intersections) > 0):
 
-                if(len(intersections) > 0):
                     road_ls = intersections[0]
-                    road_ls = getExtrapoledLine(road_ls.coords[0] , road_ls.coords[1], EXTRAPOL_RATIO = 5)
-                    walk_ls = getExtrapoledLine(walk_ls.coords[0] , walk_ls.coords[1], EXTRAPOL_RATIO = 5)
+                    road_ls = getExtrapoledLine(road_ls.coords[0], road_ls.coords[1], EXTRAPOL_RATIO=15)
+                    walk_ls = getExtrapoledLine(walk_ls.coords[0], walk_ls.coords[1], EXTRAPOL_RATIO=15)
 
+                    try:
+                        angle = getAngle(walk_ls.coords[0], tuple(walk_ls.intersection(road_ls).coords)[0],
+                                         road_ls.coords[1])
+                        print('crossing angle: ', angle)
 
-                angle = getAngle(ls1.coords[0], tuple(ls1.intersection(ls2).coords)[0] ,ls2.coords[1])
-                print('crossing angle: ', angle)
+                        ped_dict['side'] = 'left' if angle > 180 else 'right'
+                    except:
+                        print('not sure which side')
+                answer['pedestrians'] += [ped_dict]
 
-                '''
+            print('done pedestrians')
+            message = json.dumps(answer)  # message sent to server
+            print(message)
+            c.send(message.encode('ascii'))
 
             plt.show(block=False)
-
-
-
+            plt.pause(3)
+            plt.close()
 
 
         except:
-            s.close()
-
+            c.send('exeption occured'.encode('ascii'))

@@ -48,11 +48,20 @@ from shapely.geometry import LineString, Point
 from shapely.ops import split
 
 
+import json
+import random
+
+import socket
+
+
 
 from sshtunnel import SSHTunnelForwarder
 import pymongo
 import os.path
 from pymongo import MongoClient
+
+
+
 
 try:
     from data_from_mongo import read_from_mongo
@@ -299,8 +308,7 @@ ox.plot_graph(G_projected)
 
 walk_pois_df.timestamps_value=walk_pois_df.timestamps_value.astype(str)
 
-import json
-import random
+
 
 gps_azimuth=random.randint(0, 360)
 
@@ -315,7 +323,7 @@ gps_latitude =31.808269377665198
 '''
 
 speed = 0   #meanwhile we always count 5 meters
-pedestrian1_dict = {"gps_azimuth": gps_azimuth, "gps_longitude": gps_longitude, "gps_latitude": gps_latitude, "speed":speed }
+pedestrian1_dict = {"id":1, "gps_azimuth": gps_azimuth, "gps_longitude": gps_longitude, "gps_latitude": gps_latitude, "speed":speed }
 
 
 gps_azimuth=random.randint(0, 360)
@@ -324,7 +332,7 @@ gps_longitude=random.uniform(df_AS['gps_longitude'].min(), df_AS['gps_longitude'
 gps_latitude =random.uniform(df_AS['gps_latitude'].min(), df_AS['gps_latitude'].max())
 
 speed = 0   #meanwhile we always count 5 meters
-pedestrian2_dict = {"gps_azimuth": gps_azimuth, "gps_longitude": gps_longitude, "gps_latitude": gps_latitude, "speed":speed }
+pedestrian2_dict = {"id":2, "gps_azimuth": gps_azimuth, "gps_longitude": gps_longitude, "gps_latitude": gps_latitude, "speed":speed }
 
 
 gps_azimuth=random.randint(0, 360)
@@ -333,9 +341,18 @@ gps_longitude=random.uniform(df_AS['gps_longitude'].min(), df_AS['gps_longitude'
 gps_latitude =random.uniform(df_AS['gps_latitude'].min(), df_AS['gps_latitude'].max())
 
 speed = 0   #meanwhile we always count 5 meters
-pedestrian3_dict = {"gps_azimuth": gps_azimuth, "gps_longitude": gps_longitude, "gps_latitude": gps_latitude, "speed":speed }
+pedestrian3_dict = {"id":3, "gps_azimuth": gps_azimuth, "gps_longitude": gps_longitude, "gps_latitude": gps_latitude, "speed":speed }
 
-pedestrians_list=[pedestrian1_dict, pedestrian2_dict, pedestrian3_dict]
+gps_azimuth=random.randint(0, 360)
+
+gps_longitude=random.uniform(df_AS['gps_longitude'].min(), df_AS['gps_longitude'].max())
+gps_latitude =random.uniform(df_AS['gps_latitude'].min(), df_AS['gps_latitude'].max())
+
+speed = 0   #meanwhile we always count 5 meters
+pedestrian4_dict = {"id":4, "gps_azimuth": gps_azimuth, "gps_longitude": gps_longitude, "gps_latitude": gps_latitude, "speed":speed }
+
+
+pedestrians_list=[pedestrian1_dict, pedestrian2_dict, pedestrian3_dict,pedestrian4_dict]
 
 import socket
 
@@ -358,6 +375,7 @@ for i in range(len(walk_pois_df) - 1):
     message = json.dumps(ped_driver_dict)  # message sent to server
     print(message)
     s.send(message.encode('ascii'))
+    print('waiting for data')
 
     # messaga received from server
     data = s.recv(1024)
