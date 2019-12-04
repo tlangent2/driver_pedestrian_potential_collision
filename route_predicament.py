@@ -233,30 +233,22 @@ def discontinuity_detected(path_df):
 
 
 def snap_locations_to_road():
-    print('a')
     path_df['point_location'] = tuple(zip(path_df['gps_latitude'], path_df['gps_longitude']))
-    print('ab1')
 
     strlocs = str(list(path_df['point_location']))[2:-2].replace('), (', '|').replace(', ', ',')
-    print('ab2')
 
     file = open('api_key.txt', 'r')
     api_key = file.read()
-    print('ab3')
 
     response = requests.get(
         'https://roads.googleapis.com/v1/snapToRoads?path=' + strlocs + '&interpolate=false&key=' + api_key)
-    print('ab3')
 
     response = response.json()
     if 'error' in response.keys():
         print (response['error']['code'])
-    print('ab4')
 
     snapped = [(d['location']['latitude'], d['location']['longitude']) for d in response['snappedPoints']]
-    print('b')
     path_df['point_location'] = snapped
-    print('c')
     path_df['gps_latitude'] = path_df['point_location'].apply(lambda x: x[0])
     path_df['gps_longitude'] = path_df['point_location'].apply(lambda x: x[1])
 
@@ -369,7 +361,7 @@ while True:
 
     former_node, next_node, start_point, prev_point = find_direction()
     if next_node is None:
-        c.send('Got it'.encode('ascii'))
+        c.send('coldnt find next node'.encode('ascii'))
 
         continue
 
@@ -391,7 +383,7 @@ while True:
 
         if next_node is None or discontinuity_detected(path_df):
             print('Warning: discontinuity detected in snapped locations')
-            c.send('Got it'.encode('ascii'))
+            c.send('discontinuity detected in snapped locations'.encode('ascii'))
 
             continue
 
@@ -479,7 +471,7 @@ while True:
         else:
             print('no leaves edges')
     if not repaint:
-        c.send('Got it'.encode('ascii'))
+        c.send(' not repaint'.encode('ascii'))
 
     else:
         if len(pedestrians) == 0:
@@ -588,4 +580,5 @@ while True:
 
 
         except:
+            print('exeption occured!!!')
             c.send('exeption occured'.encode('ascii'))
