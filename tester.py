@@ -60,7 +60,9 @@ import pymongo
 import os.path
 from pymongo import MongoClient
 
+import uuid
 
+import SimpleITK as sitk
 
 
 try:
@@ -103,6 +105,52 @@ client = MongoClient('127.0.0.1',
 db = client[MONGO_DB]
 print('you are connected to Production server')
 print(db.collection_names())
+
+
+def myshow(img, title=None, margin=0.05, dpi=80):
+    nda = sitk.GetArrayViewFromImage(img)
+    spacing = img.GetSpacing()
+
+    if nda.ndim == 3:
+        # fastest dim, either component or x
+        c = nda.shape[-1]
+
+        # the the number of components is 3 or 4 consider it an RGB image
+        if not c in (3, 4):
+            nda = nda[nda.shape[0] // 2, :, :]
+
+    elif nda.ndim == 4:
+        c = nda.shape[-1]
+
+        if not c in (3, 4):
+            raise Runtime("Unable to show 3D-vector Image")
+
+        # take a z-slice
+        nda = nda[nda.shape[0] // 2, :, :, :]
+
+    ysize = nda.shape[0]
+    xsize = nda.shape[1]
+
+    # Make a figure big enough to accommodate an axis of xpixels by ypixels
+    # as well as the ticklabels, etc...
+    figsize = (1 + margin) * ysize / dpi, (1 + margin) * xsize / dpi
+
+    fig = plt.figure(figsize=figsize, dpi=dpi)
+    # Make the axis the right size...
+    ax = fig.add_axes([margin, margin, 1 - 2 * margin, 1 - 2 * margin])
+
+    extent = (0, xsize * spacing[1], ysize * spacing[0], 0)
+
+    t = ax.imshow(nda, extent=extent, interpolation=None)
+
+    if nda.ndim == 2:
+        t.set_cmap("gray")
+
+    if (title):
+        plt.title(title)
+    plt.show(block=False)
+    plt.pause(3)
+    plt.close()
 
 
 ids_sessions=[['5db00a4345d6764d7480fd4b',
@@ -265,6 +313,8 @@ ids_sessions=[['5db00a4345d6764d7480fd4b',
   '5db0806245d6764d74907488']]
 
 
+
+
 print('retreiving data from server')
 
 #ids_sessions = get_id_list_from_user(user_id, start_date, end_date)
@@ -356,6 +406,9 @@ pedestrians_list=[pedestrian1_dict, pedestrian2_dict, pedestrian3_dict,pedestria
 
 import socket
 
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
 # local host IP '127.0.0.1'
 host = '127.0.0.1'
 
@@ -368,7 +421,8 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
 
 # message you send to server
-for i in range(len(walk_pois_df) - 1):
+for i in range(len(walk_pois_df) - 80):
+
     driver_dict = dict(walk_pois_df.iloc[i])
     ped_driver_dict = {"id": i, "driver": driver_dict, "pedestrians": pedestrians_list}
 
@@ -379,10 +433,19 @@ for i in range(len(walk_pois_df) - 1):
 
     # messaga received from server
     data = s.recv(1024)
-
+    data = str(data.decode('ascii'))
     # print the received message
     # here it would be a reverse of sent message
-    print('Received from the server :', str(data.decode('ascii')))
+    print('Received from the server :', data)
+
+    try:
+        json_object = json.loads(data)
+        file_name = json_object['graph']
+        myshow(sitk.Expand(sitk.ReadImage(file_name), [2, 2]) )
+        os.remove(file_name)
+
+    except ValueError as e:
+        pass
 
     # ask the client whether he wants to continue
     time.sleep(1)

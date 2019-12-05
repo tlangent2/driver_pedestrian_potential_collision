@@ -49,7 +49,7 @@ from shapely.ops import split
 from descartes.patch import PolygonPatch
 import random
 import itertools
-
+import uuid
 
 import socket
 
@@ -274,6 +274,8 @@ import socket
 from _thread import *
 import threading
 
+
+
 path_df = pd.DataFrame(columns=['gps_longitude', 'gps_latitude', 'gps_speed', 'timestamps_value', 'next_node'])
 # print(path_df)
 
@@ -361,7 +363,7 @@ while True:
 
     former_node, next_node, start_point, prev_point = find_direction()
     if next_node is None:
-        c.send('coldnt find next node'.encode('ascii'))
+        c.send('Got it'.encode('ascii'))
 
         continue
 
@@ -383,7 +385,7 @@ while True:
 
         if next_node is None or discontinuity_detected(path_df):
             print('Warning: discontinuity detected in snapped locations')
-            c.send('discontinuity detected in snapped locations'.encode('ascii'))
+            c.send('Got it'.encode('ascii'))
 
             continue
 
@@ -471,7 +473,7 @@ while True:
         else:
             print('no leaves edges')
     if not repaint:
-        c.send(' not repaint'.encode('ascii'))
+        c.send('Got it'.encode('ascii'))
 
     else:
         if len(pedestrians) == 0:
@@ -482,7 +484,7 @@ while True:
             b = 0.0006
 
             fig, ax = ox.plot_graph(G, fig_height=10,
-                                    show=False, close=False,
+                                    show=False, close=True,
                                     edge_color='#777777')
 
             patch = PolygonPatch(Point(prev_point).buffer(b), fc='#9900ff', ec='k', linewidth=0, alpha=0.5, zorder=-1)
@@ -509,9 +511,15 @@ while True:
 
             patch = PolygonPatch(first_mid_edge.buffer(b), fc='#ffff00', ec='k', linewidth=0, alpha=0.5, zorder=-1)
             ax.add_patch(patch)
+            print('create file name')
 
-            answer = {'id': packet_id, 'pedestrians': []}
+            file_name = ''.join([str(uuid.uuid4().hex[:6]), 'plot.png'])
+
+            answer = {'id': packet_id, 'pedestrians': [], 'graph': file_name}
+            print('pedestrians', len(pedestrians))
             for p in pedestrians:
+                print('pedestrians', len(pedestrians))
+
                 ped_dict = {'id': p['id']}
                 poi = Point(p['gps_longitude'], p['gps_latitude'])
                 direction_point = find_target_point(poi, (180 + p['gps_azimuth']) % 360, 70000)
@@ -549,6 +557,10 @@ while True:
                     patch = PolygonPatch(line.buffer(0.0008), fc='#000000', ec='k', linewidth=0, alpha=0.5, zorder=-1)
                     ax.add_patch(patch)
 
+                print('file_name', file_name)
+                fig.savefig(file_name)  # save the figure to file
+                print('saved', file_name)
+
                 intersections = [sector.intersection(e) for e in full_edges + partial_edges + [first_mid_edge] if
                                  type(sector.intersection(e)) is LineString]
                 print('sector.intersection ', intersections)
@@ -574,11 +586,9 @@ while True:
             print(message)
             c.send(message.encode('ascii'))
 
-            plt.show(block=False)
-            plt.pause(3)
-            plt.close()
-
+        #            plt.show(block=False)
 
         except:
-            print('exeption occured!!!')
+            print('exeption occured')
             c.send('exeption occured'.encode('ascii'))
+
