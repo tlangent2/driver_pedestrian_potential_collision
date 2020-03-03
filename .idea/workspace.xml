@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/pems/rds-combined-ca-bundle (1).pem" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/pems/rds-combined-ca-bundle (1).pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/pems/viziblezone-dev.pem" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/pems/viziblezone-dev.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/pems/rds-combined-ca-bundle (1).pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/pems/viziblezone-dev.pem" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/send_crossing_info_to_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/send_crossing_info_to_server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -27,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../crossing_statistics" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../data_from_mongo" />
   </component>
   <component name="ProjectId" id="1S71mLGEVVeavyCX9nmhmHjarNo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -405,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583181995950</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="show graph tester">
+      <created>1583225501431</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1583225501431</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Revert &quot;show graph tester&quot;&#10;&#10;This reverts commit d74e5a9a">
+      <created>1583229646934</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1583229646934</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -452,11 +466,12 @@
     <MESSAGE value="change to fit the new name of the pypi package" />
     <MESSAGE value="prints to trace tablet problems" />
     <MESSAGE value="remove old version" />
-    <MESSAGE value="show graph tester" />
     <MESSAGE value="fix df_user_data used before definition" />
     <MESSAGE value="change function name" />
     <MESSAGE value="fix bundle file name" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bundle file name" />
+    <MESSAGE value="show graph tester" />
+    <MESSAGE value="Revert &quot;show graph tester&quot;&#10;&#10;This reverts commit d74e5a9a" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;show graph tester&quot;&#10;&#10;This reverts commit d74e5a9a" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
