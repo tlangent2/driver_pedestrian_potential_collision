@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="show graph tester" />
+    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="show graph tester">
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/pems/rds-combined-ca-bundle (1).pem" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/pems/rds-combined-ca-bundle (1).pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/pems/viziblezone-dev.pem" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/pems/viziblezone-dev.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/send_crossing_info_to_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/send_crossing_info_to_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="driver_pedestrian_potential_collision" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -16,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../crossing_statistics" />
   </component>
   <component name="ProjectId" id="1S71mLGEVVeavyCX9nmhmHjarNo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -50,7 +61,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tester">
+  <component name="RunManager" selected="Python.daily_crossing_info">
+    <configuration name="crossing_log_viewer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="crossing_statistics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../crossing_statistics" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" />
+      <option name="PARAMETERS" value="-s prod" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="daily_crossing_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,28 +96,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" />
-      <option name="PARAMETERS" value="-s prod" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="graph_from_dataframe" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="osm_graph_manager" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../osm_graph_manager" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../osm_graph_manager/graph_from_dataframe.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="-s prod -u w5BVNJjemxd4wEU9OHBvVRFfpTx2" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -159,17 +170,17 @@
     <list>
       <item itemvalue="Python.daily_crossing_info" />
       <item itemvalue="Python.route_predicament" />
-      <item itemvalue="Python.graph_from_dataframe" />
       <item itemvalue="Python.tester_show_graph" />
       <item itemvalue="Python.tester" />
+      <item itemvalue="Python.crossing_log_viewer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.daily_crossing_info" />
+        <item itemvalue="Python.crossing_log_viewer" />
         <item itemvalue="Python.tester" />
         <item itemvalue="Python.route_predicament" />
         <item itemvalue="Python.tester_show_graph" />
-        <item itemvalue="Python.daily_crossing_info" />
-        <item itemvalue="Python.graph_from_dataframe" />
       </list>
     </recent_temporary>
   </component>
@@ -359,8 +370,53 @@
       <option name="project" value="LOCAL" />
       <updated>1575470296811</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="remove old version">
+      <created>1582795391714</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1582795391714</updated>
+    </task>
+    <task id="LOCAL-00027" summary="show graph tester">
+      <created>1582809586057</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1582809586057</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix df_user_data used before definition">
+      <created>1583067847519</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1583067847519</updated>
+    </task>
+    <task id="LOCAL-00029" summary="change function name">
+      <created>1583068320035</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1583068320035</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix bundle file name">
+      <created>1583181995950</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1583181995950</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -395,15 +451,19 @@
     <MESSAGE value="remove unnecessary import" />
     <MESSAGE value="change to fit the new name of the pypi package" />
     <MESSAGE value="prints to trace tablet problems" />
+    <MESSAGE value="remove old version" />
     <MESSAGE value="show graph tester" />
-    <option name="LAST_COMMIT_MESSAGE" value="show graph tester" />
+    <MESSAGE value="fix df_user_data used before definition" />
+    <MESSAGE value="change function name" />
+    <MESSAGE value="fix bundle file name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bundle file name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>15</line>
+          <line>19</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -435,6 +495,11 @@
           <url>file://$PROJECT_DIR$/tester_show_graph.py</url>
           <line>58</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
