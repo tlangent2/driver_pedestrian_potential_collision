@@ -253,7 +253,7 @@ def snap_locations_to_road():
     path_df['gps_longitude'] = path_df['point_location'].apply(lambda x: x[1])
 
 
-def getExtrapoledLine(p1, p2, EXTRAPOL_RATIO=2):
+def get_extrapoled_line(p1, p2, EXTRAPOL_RATIO=2):
     'Creates a line extrapoled in p1->p2 direction'
 
     a = (p1[0] - EXTRAPOL_RATIO * (p2[0] - p1[0]), p1[1] - EXTRAPOL_RATIO * (p2[1] - p1[1]))
@@ -568,8 +568,8 @@ while True:
                 if (len(intersections) > 0):
 
                     road_ls = intersections[0]
-                    road_ls = getExtrapoledLine(road_ls.coords[0], road_ls.coords[1], EXTRAPOL_RATIO=15)
-                    walk_ls = getExtrapoledLine(walk_ls.coords[0], walk_ls.coords[1], EXTRAPOL_RATIO=15)
+                    road_ls = get_extrapoled_line(road_ls.coords[0], road_ls.coords[1], EXTRAPOL_RATIO=15)
+                    walk_ls = get_extrapoled_line(walk_ls.coords[0], walk_ls.coords[1], EXTRAPOL_RATIO=15)
 
                     try:
                         angle = getAngle(walk_ls.coords[0], tuple(walk_ls.intersection(road_ls).coords)[0],
