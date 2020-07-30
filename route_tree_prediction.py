@@ -558,7 +558,7 @@ while True:
                     ax.add_patch(patch)
 
                 print('file_name', file_name)
-                fig.savefig(file_name)  # save the figure to file
+                ffig.savefig(file_name)  # save the figure to file
                 print('saved', file_name)
 
                 intersections = [sector.intersection(e) for e in full_edges + partial_edges + [first_mid_edge] if

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../corona/.idea/corona.iml" filepath="$PROJECT_DIR$/../corona/.idea/corona.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../crosses_prediction/.idea/crosses_prediction.iml" filepath="$PROJECT_DIR$/../crosses_prediction/.idea/crosses_prediction.iml" />
       <module fileurl="file://$PROJECT_DIR$/../crossing_statistics/.idea/crossing_statistics.iml" filepath="$PROJECT_DIR$/../crossing_statistics/.idea/crossing_statistics.iml" />
       <module fileurl="file://$PROJECT_DIR$/../data_from_mongo/.idea/data_from_mongo.iml" filepath="$PROJECT_DIR$/../data_from_mongo/.idea/data_from_mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" filepath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" />

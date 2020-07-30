@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="add read_only flag">
-      <change afterPath="$PROJECT_DIR$/../crossing_statistics/achiya.py" afterDir="false" />
+    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="check ids_sessions">
+      <change afterPath="$PROJECT_DIR$/../corona/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corona/social distance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../corona/social distance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crosses_prediction/guess_cross.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crosses_prediction/guess_cross.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/tester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_from_mongo/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route_tree_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/route_tree_prediction.py" afterDir="false" />
     </list>
+    <list id="d6c6b634-5c78-44fa-9aac-84abba7ae800" name="make ids sessions independent from the arguments" comment="make ids sessions independent from the arguments" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +36,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OSM_graph_manager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../crosses_prediction" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyDependenciesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -43,6 +48,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tlang\PycharmProjects\VisibleZone\corona" />
       <recent name="C:\Users\tlang\PycharmProjects\VisibleZone\OSM_graph_manager" />
       <recent name="C:\Users\tlang\PycharmProjects\VisibleZone\data_from_mongo" />
     </key>
@@ -60,27 +66,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.daily_crossing_info">
-    <configuration name="achiya" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="crossing_statistics" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../crossing_statistics" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/achiya.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="check_crossing_and_speed" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,7 +87,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="crossing_log_viewer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="crossing_log_viewer" type="PythonConfigurationType" factoryName="Python">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -136,7 +121,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" />
-      <option name="PARAMETERS" value="-s test -u w5BVNJjemxd4wEU9OHBvVRFfpTx2 -r" />
+      <option name="PARAMETERS" value="-s prod -u 3dD0FXeXcRMctK19CTWXsn1rAGo1 -d 2020-07-29 00:00:00.000+0000 -r" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -144,7 +129,49 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tester (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="guess_cross" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="crosses_prediction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../crosses_prediction" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crosses_prediction/guess_cross.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="social distance" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="corona" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../corona" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../corona/social distance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tester (1)" type="PythonConfigurationType" factoryName="Python">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,7 +184,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/tester.py" />
-      <option name="PARAMETERS" value="-s prod" />
+      <option name="PARAMETERS" value="-s prod -u tlang" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -165,7 +192,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tester" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tester" type="PythonConfigurationType" factoryName="Python">
       <module name="driver_pedestrian_potential_collision" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -191,16 +218,15 @@
       <item itemvalue="Python.tester" />
       <item itemvalue="Python.crossing_log_viewer" />
       <item itemvalue="Python.tester (1)" />
-      <item itemvalue="Python.achiya" />
       <item itemvalue="Python.check_crossing_and_speed" />
+      <item itemvalue="Python.social distance" />
+      <item itemvalue="Python.guess_cross" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.guess_cross" />
+        <item itemvalue="Python.social distance" />
         <item itemvalue="Python.check_crossing_and_speed" />
-        <item itemvalue="Python.achiya" />
-        <item itemvalue="Python.crossing_log_viewer" />
-        <item itemvalue="Python.tester (1)" />
-        <item itemvalue="Python.tester" />
       </list>
     </recent_temporary>
   </component>
@@ -210,108 +236,11 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="" />
+      <changelist id="d6c6b634-5c78-44fa-9aac-84abba7ae800" name="make ids sessions independent from the arguments" comment="" />
       <created>1572338987468</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572338987468</updated>
-    </task>
-    <task id="LOCAL-00001" summary="remove __init__  files">
-      <created>1574176081478</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1574176081478</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fit to data_from_mongo new structure">
-      <created>1574183972999</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1574183972999</updated>
-    </task>
-    <task id="LOCAL-00003" summary="change data_from_mongo structure to classes">
-      <created>1574268426795</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1574268426795</updated>
-    </task>
-    <task id="LOCAL-00004" summary="make the imports to be compatible to run also with pip installed data_from_mongo">
-      <created>1574366780251</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1574366780251</updated>
-    </task>
-    <task id="LOCAL-00005" summary="change data_from_mongo structure to classes">
-      <created>1574600421199</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1574600421199</updated>
-    </task>
-    <task id="LOCAL-00006" summary="change data_from_mongo structure to classes">
-      <created>1574698567792</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1574698567792</updated>
-    </task>
-    <task id="LOCAL-00007" summary="change script name">
-      <created>1574698831484</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1574698831484</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fix  RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface...">
-      <created>1574759892418</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1574759892418</updated>
-    </task>
-    <task id="LOCAL-00009" summary="move fig, ax =">
-      <created>1574760456943</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1574760456943</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add commented code to get intersection result for each pedestrian.  uncommenting this code will prevent the graphs from being displayed.  enable it when you need the intersection results as linestring rather then graphs">
-      <created>1574762507475</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1574762507475</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add tester - sending every second the new location of the car and the pedestrians nearby">
-      <created>1574764965377</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1574764965377</updated>
-    </task>
-    <task id="LOCAL-00012" summary="crossings_info_from_df should always return the same variables">
-      <created>1574768716010</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1574768716010</updated>
-    </task>
-    <task id="LOCAL-00013" summary="add logs to walking_session">
-      <created>1574865421063</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1574865421063</updated>
-    </task>
-    <task id="LOCAL-00014" summary="crossing log viewer">
-      <created>1574937051622</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1574937051622</updated>
     </task>
     <task id="LOCAL-00015" summary="crossing log will download pictures by the filter of the log df instead of their own dates">
       <created>1574958165778</created>
@@ -537,7 +466,126 @@
       <option name="project" value="LOCAL" />
       <updated>1583922062666</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="check ids_sessions">
+      <created>1584219236210</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1584219236210</updated>
+    </task>
+    <task id="LOCAL-00048" summary="check ids_sessions">
+      <created>1584220640759</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1584220640759</updated>
+    </task>
+    <task id="LOCAL-00049" summary="make ids_sessions independent from the arguments">
+      <created>1584220761432</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1584220761432</updated>
+    </task>
+    <task id="LOCAL-00050" summary="retrieve information from ids once we have them">
+      <created>1584281813758</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1584281813759</updated>
+    </task>
+    <task id="LOCAL-00051" summary="check ids_sessions">
+      <created>1584281986721</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1584281986721</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Revert &quot;check ids_sessions&quot;&#10;&#10;This reverts commit fede2293">
+      <created>1584282562929</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1584282562929</updated>
+    </task>
+    <task id="LOCAL-00053" summary="refactoring, cross_statistics_by_ids to run on ids">
+      <created>1584282689467</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1584282689467</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fix last commit">
+      <created>1584282842802</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1584282842802</updated>
+    </task>
+    <task id="LOCAL-00055" summary="uncomment graph patches">
+      <created>1584295288584</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1584295288584</updated>
+    </task>
+    <task id="LOCAL-00056" summary="change name">
+      <created>1584358669356</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1584358669356</updated>
+    </task>
+    <task id="LOCAL-00057" summary="function name style">
+      <created>1584823812874</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1584823812875</updated>
+    </task>
+    <task id="LOCAL-00058" summary="cuncel test code that was commited by mistake">
+      <created>1585057079921</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1585057079921</updated>
+    </task>
+    <task id="LOCAL-00059" summary="check ids_sessions">
+      <created>1585057167161</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1585057167161</updated>
+    </task>
+    <task id="LOCAL-00060" summary="add social distance">
+      <created>1586102788359</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1586102788360</updated>
+    </task>
+    <task id="LOCAL-00061" summary="check ids_sessions">
+      <created>1586104704941</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1586104704941</updated>
+    </task>
+    <task id="LOCAL-00062" summary="check ids_sessions">
+      <created>1588176133731</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1588176133731</updated>
+    </task>
+    <task id="LOCAL-00063" summary="check ids_sessions">
+      <created>1596096994504</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1596096994505</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -564,17 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="server returns collision response to sender" />
-    <MESSAGE value="add tester - sending every second the new location of the car and the pedestrians nearby" />
-    <MESSAGE value="change naming conventions to python where needed" />
-    <MESSAGE value="remove unnecessary import" />
-    <MESSAGE value="change to fit the new name of the pypi package" />
-    <MESSAGE value="prints to trace tablet problems" />
-    <MESSAGE value="remove old version" />
-    <MESSAGE value="fix df_user_data used before definition" />
-    <MESSAGE value="fix bundle file name" />
-    <MESSAGE value="show graph tester" />
-    <MESSAGE value="Revert &quot;show graph tester&quot;&#10;&#10;This reverts commit d74e5a9a" />
     <MESSAGE value="remove num_ids" />
     <MESSAGE value="remove pems from vc" />
     <MESSAGE value="user path as an argument" />
@@ -589,7 +626,18 @@
     <MESSAGE value="add  num_steps, uniquedistance , avr_speed to walking_session" />
     <MESSAGE value="send additional parameters to app:&#10; &quot;num_steps&quot; , &quot;distance&quot;, &quot;avr_speed&quot;" />
     <MESSAGE value="change statistics vars to float" />
-    <option name="LAST_COMMIT_MESSAGE" value="change statistics vars to float" />
+    <MESSAGE value="make ids_sessions independent from the arguments" />
+    <MESSAGE value="retrieve information from ids once we have them" />
+    <MESSAGE value="Revert &quot;check ids_sessions&quot;&#10;&#10;This reverts commit fede2293" />
+    <MESSAGE value="refactoring, cross_statistics_by_ids to run on ids" />
+    <MESSAGE value="fix last commit" />
+    <MESSAGE value="uncomment graph patches" />
+    <MESSAGE value="change name" />
+    <MESSAGE value="function name style" />
+    <MESSAGE value="cuncel test code that was commited by mistake" />
+    <MESSAGE value="add social distance" />
+    <MESSAGE value="check ids_sessions" />
+    <option name="LAST_COMMIT_MESSAGE" value="check ids_sessions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -645,11 +693,6 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>481</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tester.py</url>
           <line>328</line>
           <option name="timeStamp" value="40" />
@@ -663,11 +706,6 @@
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
           <line>103</line>
           <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>376</line>
-          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
@@ -696,8 +734,83 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>371</line>
-          <option name="timeStamp" value="59" />
+          <line>401</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>430</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>420</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
+          <line>124</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>201</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>193</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>363</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/route_tree_prediction.py</url>
+          <line>560</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>443</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>435</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>481</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>369</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>459</line>
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

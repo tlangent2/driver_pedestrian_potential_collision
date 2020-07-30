@@ -6,5 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="data_from_mongo" />
     <orderEntry type="module" module-name="OSM Graph manager" />
+    <orderEntry type="module" module-name="corona" />
+    <orderEntry type="module" module-name="crosses_prediction" />
   </component>
 </module>
