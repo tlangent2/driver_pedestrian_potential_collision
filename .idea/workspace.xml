@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="check ids_sessions">
-      <change afterPath="$PROJECT_DIR$/../corona/venv/pyvenv.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../corona/social distance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../corona/social distance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crosses_prediction/guess_cross.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crosses_prediction/guess_cross.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/tester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/driver_pedestrian_potential_collision.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route_tree_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/route_tree_prediction.py" afterDir="false" />
     </list>
     <list id="d6c6b634-5c78-44fa-9aac-84abba7ae800" name="make ids sessions independent from the arguments" comment="make ids sessions independent from the arguments" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,7 +115,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" />
-      <option name="PARAMETERS" value="-s prod -u 3dD0FXeXcRMctK19CTWXsn1rAGo1 -d 2020-07-29 00:00:00.000+0000 -r" />
+      <option name="PARAMETERS" value="-s prod -u FF1rx9kMHgbqb7gjF1Xjz1ojkW12" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -241,13 +235,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572338987468</updated>
-    </task>
-    <task id="LOCAL-00015" summary="crossing log will download pictures by the filter of the log df instead of their own dates">
-      <created>1574958165778</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1574958165778</updated>
     </task>
     <task id="LOCAL-00016" summary="remove pyqtree&#10;add crossing_locations in images">
       <created>1575196958955</created>
@@ -585,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596096994505</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="check ids_sessions">
+      <created>1596125226233</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1596125226233</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -708,16 +702,6 @@
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/achiya.py</url>
           <line>6</line>
           <option name="timeStamp" value="56" />
@@ -733,49 +717,14 @@
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>401</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>430</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>420</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py</url>
           <line>68</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>124</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>201</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
           <line>193</line>
           <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>363</line>
-          <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/route_tree_prediction.py</url>
@@ -789,28 +738,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>435</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>481</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>369</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>459</line>
-          <option name="timeStamp" value="80" />
+          <line>201</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
