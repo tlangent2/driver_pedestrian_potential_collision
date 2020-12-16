@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="check ids_sessions">
+    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="commit tester">
       <change beforePath="$PROJECT_DIR$/../crosses_prediction/guess_cross.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crosses_prediction/guess_cross.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/accessKeys.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/accessKeys.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_usage_statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_usage_statistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/tester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="d6c6b634-5c78-44fa-9aac-84abba7ae800" name="make ids sessions independent from the arguments" comment="make ids sessions independent from the arguments" />
@@ -36,6 +44,7 @@
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings is-module-sdk="true">
+        <option name="useSoftWraps" value="true" />
         <option name="myUseModuleSdk" value="true" />
       </console-settings>
     </option>
@@ -60,7 +69,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.daily_crossing_info">
-    <configuration name="check_crossing_and_speed" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="check_crossing_and_speed" type="PythonConfigurationType" factoryName="Python">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -115,7 +124,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" />
-      <option name="PARAMETERS" value="-s prod -u FF1rx9kMHgbqb7gjF1Xjz1ojkW12" />
+      <option name="PARAMETERS" value="-s prod -u 1lktkn2qXuWdgF4WcbQZjN09z9E2 -d 2020-03-03 00:00:00.674" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -136,6 +145,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crosses_prediction/guess_cross.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="read_from_mongo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="data_from_mongo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../data_from_mongo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -215,14 +245,18 @@
       <item itemvalue="Python.check_crossing_and_speed" />
       <item itemvalue="Python.social distance" />
       <item itemvalue="Python.guess_cross" />
+      <item itemvalue="Python.read_from_mongo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.read_from_mongo" />
         <item itemvalue="Python.guess_cross" />
         <item itemvalue="Python.social distance" />
-        <item itemvalue="Python.check_crossing_and_speed" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_INHERITED" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -235,41 +269,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572338987468</updated>
-    </task>
-    <task id="LOCAL-00016" summary="remove pyqtree&#10;add crossing_locations in images">
-      <created>1575196958955</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1575196958955</updated>
-    </task>
-    <task id="LOCAL-00017" summary="server returns collision response to sender">
-      <created>1575361374684</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1575361374684</updated>
-    </task>
-    <task id="LOCAL-00018" summary="add tester - sending every second the new location of the car and the pedestrians nearby">
-      <created>1575368420568</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1575368420568</updated>
-    </task>
-    <task id="LOCAL-00019" summary="change naming conventions to python where needed">
-      <created>1575368862176</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1575368862176</updated>
-    </task>
-    <task id="LOCAL-00020" summary="change naming conventions to python where needed">
-      <created>1575369145324</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1575369145324</updated>
     </task>
     <task id="LOCAL-00021" summary="change naming conventions to python where needed">
       <created>1575369693481</created>
@@ -579,7 +578,42 @@
       <option name="project" value="LOCAL" />
       <updated>1596125226233</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="commit tester">
+      <created>1596551350292</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1596551350292</updated>
+    </task>
+    <task id="LOCAL-00066" summary="update machines and keys">
+      <created>1596617728818</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1596617728818</updated>
+    </task>
+    <task id="LOCAL-00067" summary="fix code to build dataframe from monngdata">
+      <created>1607962296106</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1607962296114</updated>
+    </task>
+    <task id="LOCAL-00068" summary="add singles_df after merge">
+      <created>1608052401977</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1608052401980</updated>
+    </task>
+    <task id="LOCAL-00069" summary="change timestamp format">
+      <created>1608119845263</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1608119845263</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -606,11 +640,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove num_ids" />
-    <MESSAGE value="remove pems from vc" />
-    <MESSAGE value="user path as an argument" />
-    <MESSAGE value="change file name" />
-    <MESSAGE value="change function name" />
     <MESSAGE value="refactor to find_and_send_daily_crossing_info" />
     <MESSAGE value="unite update_generic_statistics with send in results_to_appserver" />
     <MESSAGE value="add read_only flag" />
@@ -631,7 +660,12 @@
     <MESSAGE value="cuncel test code that was commited by mistake" />
     <MESSAGE value="add social distance" />
     <MESSAGE value="check ids_sessions" />
-    <option name="LAST_COMMIT_MESSAGE" value="check ids_sessions" />
+    <MESSAGE value="commit tester" />
+    <MESSAGE value="update machines and keys" />
+    <MESSAGE value="fix code to build dataframe from monngdata" />
+    <MESSAGE value="add singles_df after merge" />
+    <MESSAGE value="change timestamp format" />
+    <option name="LAST_COMMIT_MESSAGE" value="change timestamp format" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -677,16 +711,6 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py</url>
-          <line>200</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py</url>
-          <line>248</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tester.py</url>
           <line>328</line>
           <option name="timeStamp" value="40" />
@@ -718,7 +742,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py</url>
-          <line>68</line>
+          <line>77</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -733,19 +757,112 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>443</line>
+          <line>415</line>
           <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py</url>
+          <line>227</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crosses_prediction/guess_cross.py</url>
+          <line>296</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>245</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>424</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>406</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>408</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>414</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>440</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
           <line>201</line>
-          <option name="timeStamp" value="81" />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>202</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="data_to_upload" />
+        <watch expression="data_to_upload" language="Python" />
+        <watch expression="ids_sessions" language="Python" />
+        <watch expression="ids_sessions" language="Python" />
+        <watch expression="crossings_locations[0]" language="Python" />
+        <watch expression="crossings_locations[0][0]" language="Python" />
+        <watch expression="df_AS.timestamp_local.iloc[0]" language="Python" />
+        <watch expression="df_AS.timestamp_local.iloc[0][-6:-3]" language="Python" />
+        <watch expression="df_AS.timestamp_local.iloc[0]" language="Python" />
+        <watch expression="df_AS.user_id" language="Python" />
+        <watch expression="e" language="Python" />
+        <watch expression="df_AS.timestamp_local.iloc[0]" language="Python" />
+        <watch expression="df_AS" language="Python" />
+        <watch expression="str(df_AS._id.iloc[20])" language="Python" />
+        <watch expression="ids" language="Python" />
+        <watch expression="df" />
+        <watch expression="len(df)" language="Python" />
+        <watch expression="e" language="Python" />
+        <watch expression="df.user_id.iloc[i]" language="Python" />
+        <watch expression="df.start_time.iloc[i]..strftime(&quot;%m-%d-%H%M&quot;)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
