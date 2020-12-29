@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="unify upload session">
+    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="new results for existing walking session will update them rather than adding them to former results">
       <change afterPath="$PROJECT_DIR$/../crossing_statistics/run crossing info on all users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/50cbe6plot.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_usage_statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_usage_statistics.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/e7864bplot.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/tester.py" afterDir="false" />
@@ -68,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run crossing info on all users">
+  <component name="RunManager" selected="Python.daily_crossing_info">
     <configuration name="check_crossing_and_speed" type="PythonConfigurationType" factoryName="Python">
       <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,7 +123,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" />
-      <option name="PARAMETERS" value="-s prod -u 1lktkn2qXuWdgF4WcbQZjN09z9E2" />
+      <option name="PARAMETERS" value="-s prod -u 1lktkn2qXuWdgF4WcbQZjN09z9E2 -d 2020-03-02 11:58:11.893" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -315,13 +314,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572338987468</updated>
-    </task>
-    <task id="LOCAL-00023" summary="change to fit the new name of the pypi package">
-      <created>1575373160236</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1575373160236</updated>
     </task>
     <task id="LOCAL-00024" summary="prints to trace tablet problems">
       <created>1575468837724</created>
@@ -659,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608137967413</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="new results for existing walking session will update them rather than adding them to former results">
+      <created>1609019768033</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1609019768035</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -686,7 +685,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add read_only flag" />
     <MESSAGE value="change columns names in walking session" />
     <MESSAGE value="fix date from argument" />
     <MESSAGE value="fix total_run_time not defined in except" />
@@ -711,7 +709,8 @@
     <MESSAGE value="change timestamp format" />
     <MESSAGE value="remove obsolete_record" />
     <MESSAGE value="unify upload session" />
-    <option name="LAST_COMMIT_MESSAGE" value="unify upload session" />
+    <MESSAGE value="new results for existing walking session will update them rather than adding them to former results" />
+    <option name="LAST_COMMIT_MESSAGE" value="new results for existing walking session will update them rather than adding them to former results" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -843,48 +842,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>425</line>
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
           <line>223</line>
           <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>369</line>
-          <option name="timeStamp" value="124" />
+          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>414</line>
-          <option name="timeStamp" value="125" />
+          <line>452</line>
+          <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>417</line>
-          <option name="timeStamp" value="128" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>433</line>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>432</line>
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>403</line>
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>374</line>
-          <option name="timeStamp" value="133" />
+          <line>411</line>
+          <option name="timeStamp" value="140" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -915,6 +889,8 @@
         <watch expression="du['ids']" language="Python" />
         <watch expression="ws" language="Python" />
         <watch expression="ws[ws['ids'].astype(str) == str(du['ids'])].iloc[0]['_id']" language="Python" />
+        <watch expression="df_AS.iloc[0]['_id']" language="Python" />
+        <watch expression="uploaded_data" language="Python" />
       </configuration>
     </watches-manager>
   </component>
