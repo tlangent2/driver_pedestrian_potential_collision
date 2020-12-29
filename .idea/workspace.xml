@@ -4,13 +4,11 @@
     <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="new results for existing walking session will update them rather than adding them to former results">
       <change afterPath="$PROJECT_DIR$/../crossing_statistics/run crossing info on all users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/50cbe6plot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/e7864bplot.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/tester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="d6c6b634-5c78-44fa-9aac-84abba7ae800" name="make ids sessions independent from the arguments" comment="make ids sessions independent from the arguments" />
@@ -123,7 +121,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" />
-      <option name="PARAMETERS" value="-s prod -u 1lktkn2qXuWdgF4WcbQZjN09z9E2 -d 2020-03-02 11:58:11.893" />
+      <option name="PARAMETERS" value="-s prod -u 1lktkn2qXuWdgF4WcbQZjN09z9E2  -d &quot;2020-03-02 11:58:11.893+0000&quot; -e &quot;2020-03-03 11:58:11.893+0000&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -314,13 +312,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572338987468</updated>
-    </task>
-    <task id="LOCAL-00024" summary="prints to trace tablet problems">
-      <created>1575468837724</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1575468837725</updated>
     </task>
     <task id="LOCAL-00025" summary="show graph tester">
       <created>1575470296811</created>
@@ -658,7 +649,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609019768035</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="send to server">
+      <created>1609241112741</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1609241112742</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -685,7 +683,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change columns names in walking session" />
     <MESSAGE value="fix date from argument" />
     <MESSAGE value="fix total_run_time not defined in except" />
     <MESSAGE value="add  num_steps, uniquedistance , avr_speed to walking_session" />
@@ -710,7 +707,8 @@
     <MESSAGE value="remove obsolete_record" />
     <MESSAGE value="unify upload session" />
     <MESSAGE value="new results for existing walking session will update them rather than adding them to former results" />
-    <option name="LAST_COMMIT_MESSAGE" value="new results for existing walking session will update them rather than adding them to former results" />
+    <MESSAGE value="send to server" />
+    <option name="LAST_COMMIT_MESSAGE" value="send to server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -860,6 +858,16 @@
           <line>411</line>
           <option name="timeStamp" value="140" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -891,6 +899,9 @@
         <watch expression="ws[ws['ids'].astype(str) == str(du['ids'])].iloc[0]['_id']" language="Python" />
         <watch expression="df_AS.iloc[0]['_id']" language="Python" />
         <watch expression="uploaded_data" language="Python" />
+        <watch expression="sdate" language="Python" />
+        <watch expression="sdate" language="Python" />
+        <watch expression="edate" language="Python" />
       </configuration>
     </watches-manager>
   </component>
