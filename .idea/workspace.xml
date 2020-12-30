@@ -4,8 +4,8 @@
     <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="new results for existing walking session will update them rather than adding them to former results">
       <change afterPath="$PROJECT_DIR$/../crossing_statistics/run crossing info on all users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/50cbe6plot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/e7864bplot.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/tester.py" afterDir="false" />
@@ -312,13 +312,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572338987468</updated>
-    </task>
-    <task id="LOCAL-00025" summary="show graph tester">
-      <created>1575470296811</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1575470296811</updated>
     </task>
     <task id="LOCAL-00026" summary="remove old version">
       <created>1582795391714</created>
@@ -656,7 +649,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609241112742</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="include in input data startdate and enddate">
+      <created>1609253622600</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1609253622602</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -683,7 +683,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix date from argument" />
     <MESSAGE value="fix total_run_time not defined in except" />
     <MESSAGE value="add  num_steps, uniquedistance , avr_speed to walking_session" />
     <MESSAGE value="send additional parameters to app:&#10; &quot;num_steps&quot; , &quot;distance&quot;, &quot;avr_speed&quot;" />
@@ -708,7 +707,8 @@
     <MESSAGE value="unify upload session" />
     <MESSAGE value="new results for existing walking session will update them rather than adding them to former results" />
     <MESSAGE value="send to server" />
-    <option name="LAST_COMMIT_MESSAGE" value="send to server" />
+    <MESSAGE value="include in input data startdate and enddate" />
+    <option name="LAST_COMMIT_MESSAGE" value="include in input data startdate and enddate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -820,7 +820,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>454</line>
+          <line>455</line>
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -850,7 +850,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>452</line>
+          <line>453</line>
           <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
