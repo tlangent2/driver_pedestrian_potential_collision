@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="new results for existing walking session will update them rather than adding them to former results">
+    <list default="true" id="aa9ce146-cfd6-4f2e-8ce5-2b32db2ad119" name="Default Changelist" comment="pass the connection itself to run">
       <change afterPath="$PROJECT_DIR$/../crossing_statistics/run crossing info on all users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crossing_statistics/run daily by timezone.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/50cbe6plot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/crossing_log_viewer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/e7864bplot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/results_to_appserver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crossing_statistics/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crossing_statistics/tester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_from_mongo/timerange_for_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="d6c6b634-5c78-44fa-9aac-84abba7ae800" name="make ids sessions independent from the arguments" comment="make ids sessions independent from the arguments" />
@@ -213,19 +215,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="social distance" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="corona" />
+    <configuration name="run daily by timezone" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="crossing_statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\tlang\AppData\Local\Continuum\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../corona" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../crossing_statistics" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../corona/social distance.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../crossing_statistics/run daily by timezone.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -282,19 +284,19 @@
       <item itemvalue="Python.crossing_log_viewer" />
       <item itemvalue="Python.tester (1)" />
       <item itemvalue="Python.check_crossing_and_speed" />
-      <item itemvalue="Python.social distance" />
       <item itemvalue="Python.guess_cross" />
       <item itemvalue="Python.read_from_mongo" />
       <item itemvalue="Python.run crossing info on all users" />
       <item itemvalue="Python.results_to_appserver" />
+      <item itemvalue="Python.run daily by timezone" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run daily by timezone" />
         <item itemvalue="Python.run crossing info on all users" />
         <item itemvalue="Python.results_to_appserver" />
         <item itemvalue="Python.read_from_mongo" />
         <item itemvalue="Python.guess_cross" />
-        <item itemvalue="Python.social distance" />
       </list>
     </recent_temporary>
   </component>
@@ -312,90 +314,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572338987468</updated>
-    </task>
-    <task id="LOCAL-00026" summary="remove old version">
-      <created>1582795391714</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1582795391714</updated>
-    </task>
-    <task id="LOCAL-00027" summary="show graph tester">
-      <created>1582809586057</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1582809586057</updated>
-    </task>
-    <task id="LOCAL-00028" summary="fix df_user_data used before definition">
-      <created>1583067847519</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1583067847519</updated>
-    </task>
-    <task id="LOCAL-00029" summary="change function name">
-      <created>1583068320035</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1583068320035</updated>
-    </task>
-    <task id="LOCAL-00030" summary="fix bundle file name">
-      <created>1583181995950</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1583181995950</updated>
-    </task>
-    <task id="LOCAL-00031" summary="show graph tester">
-      <created>1583225501431</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1583225501431</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Revert &quot;show graph tester&quot;&#10;&#10;This reverts commit d74e5a9a">
-      <created>1583229646934</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1583229646934</updated>
-    </task>
-    <task id="LOCAL-00033" summary="remove num_ids">
-      <created>1583229941876</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1583229941876</updated>
-    </task>
-    <task id="LOCAL-00034" summary="remove pems from vc">
-      <created>1583238236503</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1583238236503</updated>
-    </task>
-    <task id="LOCAL-00035" summary="user path as an argument">
-      <created>1583244557443</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1583244557443</updated>
-    </task>
-    <task id="LOCAL-00036" summary="change file name">
-      <created>1583251822108</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1583251822108</updated>
-    </task>
-    <task id="LOCAL-00037" summary="change function name">
-      <created>1583252145624</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1583252145624</updated>
     </task>
     <task id="LOCAL-00038" summary="refactor to find_and_send_daily_crossing_info">
       <created>1583272172691</created>
@@ -656,7 +574,91 @@
       <option name="project" value="LOCAL" />
       <updated>1609253622602</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="change name du to session">
+      <created>1609325796348</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1609325796348</updated>
+    </task>
+    <task id="LOCAL-00076" summary="fix former commit">
+      <created>1609328532481</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1609328532481</updated>
+    </task>
+    <task id="LOCAL-00077" summary="retrieve walking_session for user_id, more efficient">
+      <created>1609328640391</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1609328640392</updated>
+    </task>
+    <task id="LOCAL-00078" summary="fix former commit">
+      <created>1609330343714</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1609330343714</updated>
+    </task>
+    <task id="LOCAL-00079" summary="write  to userstatistics">
+      <created>1609490114770</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1609490114770</updated>
+    </task>
+    <task id="LOCAL-00080" summary="fill useerstatistics tables">
+      <created>1609777233088</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1609777233090</updated>
+    </task>
+    <task id="LOCAL-00081" summary="add magnetometer and rotation matrix">
+      <created>1609845106849</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1609845106849</updated>
+    </task>
+    <task id="LOCAL-00082" summary="change order">
+      <created>1609948356800</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1609948356800</updated>
+    </task>
+    <task id="LOCAL-00083" summary="seperate sending path image to s3 from session creation">
+      <created>1609948954216</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1609948954216</updated>
+    </task>
+    <task id="LOCAL-00084" summary="pictures are not produced in read only mode">
+      <created>1609958311304</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1609958311304</updated>
+    </task>
+    <task id="LOCAL-00085" summary="delete argument total">
+      <created>1610021831008</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1610021831010</updated>
+    </task>
+    <task id="LOCAL-00086" summary="send to run the connection_type itself">
+      <created>1610025035593</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1610025035594</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -683,17 +685,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix total_run_time not defined in except" />
-    <MESSAGE value="add  num_steps, uniquedistance , avr_speed to walking_session" />
-    <MESSAGE value="send additional parameters to app:&#10; &quot;num_steps&quot; , &quot;distance&quot;, &quot;avr_speed&quot;" />
-    <MESSAGE value="change statistics vars to float" />
-    <MESSAGE value="make ids_sessions independent from the arguments" />
-    <MESSAGE value="retrieve information from ids once we have them" />
-    <MESSAGE value="Revert &quot;check ids_sessions&quot;&#10;&#10;This reverts commit fede2293" />
-    <MESSAGE value="refactoring, cross_statistics_by_ids to run on ids" />
-    <MESSAGE value="fix last commit" />
-    <MESSAGE value="uncomment graph patches" />
-    <MESSAGE value="change name" />
     <MESSAGE value="function name style" />
     <MESSAGE value="cuncel test code that was commited by mistake" />
     <MESSAGE value="add social distance" />
@@ -708,7 +699,18 @@
     <MESSAGE value="new results for existing walking session will update them rather than adding them to former results" />
     <MESSAGE value="send to server" />
     <MESSAGE value="include in input data startdate and enddate" />
-    <option name="LAST_COMMIT_MESSAGE" value="include in input data startdate and enddate" />
+    <MESSAGE value="change name du to session" />
+    <MESSAGE value="retrieve walking_session for user_id, more efficient" />
+    <MESSAGE value="fix former commit" />
+    <MESSAGE value="write  to userstatistics" />
+    <MESSAGE value="fill useerstatistics tables" />
+    <MESSAGE value="add magnetometer and rotation matrix" />
+    <MESSAGE value="change order" />
+    <MESSAGE value="seperate sending path image to s3 from session creation" />
+    <MESSAGE value="pictures are not produced in read only mode" />
+    <MESSAGE value="delete argument total" />
+    <MESSAGE value="send to run the connection_type itself" />
+    <option name="LAST_COMMIT_MESSAGE" value="send to run the connection_type itself" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -765,7 +767,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>103</line>
+          <line>111</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -790,7 +792,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>193</line>
+          <line>201</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -800,7 +802,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../data_from_mongo/read_from_mongo.py</url>
-          <line>227</line>
+          <line>226</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -815,12 +817,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>245</line>
+          <line>257</line>
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>455</line>
+          <line>534</line>
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -839,69 +841,100 @@
           <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>223</line>
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
           <line>29</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>453</line>
+          <line>532</line>
           <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
-          <line>411</line>
-          <option name="timeStamp" value="140" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
           <line>107</line>
-          <option name="timeStamp" value="145" />
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>520</line>
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>501</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>529</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>515</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>497</line>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>494</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../crossing_statistics/check_crossing_and_speed.py</url>
+          <line>488</line>
+          <option name="timeStamp" value="172" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../crossing_statistics/daily_crossing_info.py</url>
-          <line>110</line>
-          <option name="timeStamp" value="151" />
+          <line>92</line>
+          <option name="timeStamp" value="173" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="data_to_upload" language="Python" />
-        <watch expression="ids_sessions" language="Python" />
-        <watch expression="ids_sessions" language="Python" />
-        <watch expression="crossings_locations[0]" language="Python" />
-        <watch expression="crossings_locations[0][0]" language="Python" />
-        <watch expression="df_AS.timestamp_local.iloc[0]" language="Python" />
-        <watch expression="df_AS.timestamp_local.iloc[0][-6:-3]" language="Python" />
-        <watch expression="df_AS.timestamp_local.iloc[0]" language="Python" />
-        <watch expression="df_AS.user_id" language="Python" />
-        <watch expression="e" language="Python" />
-        <watch expression="df_AS.timestamp_local.iloc[0]" language="Python" />
-        <watch expression="df_AS" language="Python" />
-        <watch expression="str(df_AS._id.iloc[20])" language="Python" />
-        <watch expression="ids" language="Python" />
-        <watch expression="ids" language="Python" />
-        <watch expression="df" />
-        <watch expression="len(df)" language="Python" />
-        <watch expression="e" language="Python" />
-        <watch expression="df.user_id.iloc[i]" language="Python" />
-        <watch expression="df.start_time.iloc[i]..strftime(&quot;%m-%d-%H%M&quot;)" language="Python" />
-        <watch expression="e" language="Python" />
-        <watch expression="len(ws)" language="Python" />
-        <watch expression="du['ids']" language="Python" />
-        <watch expression="ws" language="Python" />
-        <watch expression="ws[ws['ids'].astype(str) == str(du['ids'])].iloc[0]['_id']" language="Python" />
-        <watch expression="df_AS.iloc[0]['_id']" language="Python" />
-        <watch expression="uploaded_data" language="Python" />
-        <watch expression="sdate" language="Python" />
-        <watch expression="sdate" language="Python" />
-        <watch expression="edate" language="Python" />
+        <watch expression="datetime(stats['last_start_walking_time'].to_pydatetime()).replace(tzinfo=timezone(timedelta(hours=+9)))" language="Python" />
+        <watch expression="stats['last_start_walking_time'].replace(tzinfo=timedelta(seconds=3*3600))" language="Python" />
+        <watch expression="midnight.replace(tzinfo=timedelta(seconds=timezone * 3600))" language="Python" />
+        <watch expression="timezone(timedelta(seconds=timezone*3600))" language="Python" />
+        <watch expression="stats['last_start_walking_time']" language="Python" />
+        <watch expression="type(midnight)" language="Python" />
+        <watch expression="timedelta(seconds=timezone*3600)" language="Python" />
+        <watch expression="stats['last_start_walking_time'].replace(tzinfo=tz.tzoffset(timezone , 3600))" language="Python" />
+        <watch expression="midnight.replace(tzinfo=timezone(timedelta(seconds=3*3600)))" language="Python" />
+        <watch expression="midnight.replace(tzinfo=timezone(timedelta(seconds=3*3600)))" language="Python" />
+        <watch expression="midnight.replace(tzinfo=timezone(timedelta(seconds=local_tz*3600)))" language="Python" />
+        <watch expression="timezone" language="Python" />
+        <watch expression="midnight.replace(tzinfo=timezone(timedelta(seconds=local_tz*3600)))" language="Python" />
+        <watch expression="timedelta(seconds=local_tz*3600)" language="Python" />
+        <watch expression="timedelta(seconds=3*3600)" language="Python" />
+        <watch expression="timezone(timedelta(seconds=local_tz*3600))" language="Python" />
+        <watch expression="midnight.replace(tzinfo=timezone(timedelta(seconds=local_tz*3600)))" language="Python" />
+        <watch expression="[session['crossings_sum'] for session in data_to_upload if session['start_time'] &gt; stats['last_start_walking_time']]" language="Python" />
+        <watch expression="int(sum([session['crossings_sum'] for session in data_to_upload if session['start_time'] &gt; stats['last_start_walking_time'].replace(tzinfo=timezone(timedelta(seconds=local_tz*3600)))]) + stats['total_cross'])" language="Python" />
+        <watch expression="timezone(timedelta(seconds=local_tz*3600))" language="Python" />
+        <watch expression="timezone(timedelta(seconds=local_tz*3600))" language="Python" />
+        <watch expression="int(local_tz)" language="Python" />
+        <watch expression="midnight.replace(tzinfo=timezone(timedelta(seconds=local_tz*3600)))" language="Python" />
+        <watch expression="int(sum([session['crossings_sum'] for session in data_to_upload if session['start_time'] &gt; stats['last_" language="Python" />
+        <watch expression="int(sum([session['crossings_sum'] for session in data_to_upload if session['start_time'] &gt; stats['last_start_walking_time'].replace(tzinfo=timezone(timedelta(seconds=local_tz*3600)))]) + stats['total_cross'])" language="Python" />
+        <watch expression="int(sum([session['crossings_sum'] for session in data_to_upload if session['start_time'] &gt; stats['last_start_walking_time'].replace(tzinfo=timezone(timedelta(seconds=local_tz*3600))) and session['start_time'] &gt; midnight])+stats['last_day_cross'])" language="Python" />
+        <watch expression="new_stats['last_start_walking_time']" language="Python" />
+        <watch expression="new_stats['last_start_walking_time']" language="Python" />
+        <watch expression="stats['last_start_walking_time']" language="Python" />
+        <watch expression="stats['last_start_walking_time']" language="Python" />
+        <watch expression="(stats['last_start_walking_time']+timedelta(hours=local_tz)).replace(tzinfo=timezone(timedelta(seconds=local_tz*3600)))" language="Python" />
       </configuration>
     </watches-manager>
   </component>
